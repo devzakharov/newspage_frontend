@@ -6,6 +6,12 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {RegisterComponent} from './register.component';
 import {LoginService} from '../login.service';
+import {RouterModule, Routes} from '@angular/router';
+
+const appRoutes: Routes =[
+  { path: 'register', component: RegisterComponent},
+  { path: '', component: AppComponent},
+];
 
 @NgModule({
   declarations: [
@@ -17,7 +23,8 @@ import {LoginService} from '../login.service';
     FormsModule,
     HttpClientModule,
     InfiniteScrollModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [LoginService],
   bootstrap: [AppComponent, RegisterComponent]
