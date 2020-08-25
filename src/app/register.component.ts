@@ -1,24 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import {LoginService} from '../login.service';
-import { HttpClient } from '@angular/common/http';
+import {RegisterService} from '../register.service';
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { AlertService } from './_alert';
+import {Observable, throwError} from 'rxjs';
+import {catchError} from 'rxjs/operators';
 
 
 @Component({
   selector: 'app-login',
-  templateUrl: './register.component.html'
-  // styleUrls: ['./login.component.css']
+  templateUrl: './register.component.html',
+  styleUrls: ['./app.component.css', './login.component.css']
 })
 
 export class RegisterComponent implements OnInit {
-  loginForm;
+  registerForm;
+  // protected alertService: AlertService;
+
+  options = {
+    autoClose: true,
+    keepAfterRouteChange: false
+  };
 
   constructor(
-    private loginService: LoginService,
+    // private RegisterService: RegisterService,
     private formBuilder: FormBuilder,
-    private http: HttpClient
+    private http: HttpClient,
+    protected alertService: AlertService
   ) {
-      this.loginForm = this.formBuilder.group({
+      this.registerForm = this.formBuilder.group({
         login: '',
         email: '',
         password: ''
@@ -35,14 +45,19 @@ export class RegisterComponent implements OnInit {
   }
 
   sendRequest(userData): void {
-    const body = '{ "login" : ' + userData.login +
-      ', "email" : ' + userData.email +
-      ', "password" : ' + userData.password +
-      ' }';
+    const body = JSON.stringify({login: userData.login, email: userData.email, password: userData.password});
     this.http.post('http://localhost:5656/register', body).subscribe(data => {
       console.log('Response: ', data);
+      this.alertService.success(data.toString(), this.options);
+    }, (err) => {
+      console.log(err.error);
+      if (Array.isArray(err.error)) {
+        err.error.forEach(val => this.alertService.error(val, this.options));
+      } else {
+        this.alertService.error(err.error, this.options);
+      }
     });
   }
-
 }
+
 

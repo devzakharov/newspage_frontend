@@ -5,18 +5,25 @@ import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import {RegisterComponent} from './register.component';
-import {LoginService} from '../login.service';
+import {RegisterService} from '../register.service';
 import {RouterModule, Routes} from '@angular/router';
+import {LoginComponent} from './login.component';
+import {NewsComponent} from './news.component';
+import { AlertModule } from './_alert';
 
-const appRoutes: Routes =[
+const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
+  { path: 'login', component: LoginComponent},
   { path: '', component: AppComponent},
+  { path: 'app', component: NewsComponent}
 ];
 
 @NgModule({
   declarations: [
     AppComponent,
-    RegisterComponent
+    RegisterComponent,
+    LoginComponent,
+    NewsComponent
   ],
   imports: [
     BrowserModule,
@@ -24,9 +31,10 @@ const appRoutes: Routes =[
     HttpClientModule,
     InfiniteScrollModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AlertModule
   ],
-  providers: [LoginService],
-  bootstrap: [AppComponent, RegisterComponent]
+  providers: [RegisterService],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,16 +1,22 @@
-
 :host {
 
 }
-
-.header {
-  height: 70px;
-  border-bottom: 1px solid black;
+.news_app_body {
+  height: 99vh;
+  overflow: hidden;
 }
-.form-section {
-  padding: 15px 0;
-  border-bottom: 1px solid black;
+.special-form {
+  flex-direction: column;
+  padding: 25px;
+  border: 1px solid rgba(0, 144, 144, 0.56);
+  border-radius: 13px;
+  width: 100%;
+  max-width: 400px;
 }
-.content-section {
-  padding: 15px 0;
+alert {
+  position: fixed;
+  top: 15px;
+  width: calc(100%);
+  padding: 0 15px;
+  z-index: 9999;
 }

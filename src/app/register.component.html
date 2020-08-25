@@ -1,28 +1,31 @@
-<h3>Регистрация</h3>
+<div class="row h-100 justify-content-center align-items-center">
+  <div class="row special-form">
+    <h3 class="align-self-center">Регистрация</h3>
 
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.value)" class="row flex-column">
+      <div class="form-group">
+        <label for="login">
+          Логин
+        </label>
+        <input class="form-control" id="login" type="text" formControlName="login">
+      </div>
 
-  <div>
-    <label for="login">
-      Login
-    </label>
-    <input id="login" type="text" formControlName="login">
+      <div class="form-group">
+        <label for="email">
+          E-mail
+        </label>
+        <input class="form-control" id="email" type="text" formControlName="email">
+      </div>
+
+      <div class="form-group">
+        <label for="password">
+          Пароль
+        </label>
+        <input class="form-control" id="password" type="password" formControlName="password">
+      </div>
+
+      <button class="btn btn-primary align-self-center" type="submit">Зарегистрироваться</button>
+
+    </form>
   </div>
-
-  <div>
-    <label for="email">
-      E-mail
-    </label>
-    <input id="email" type="text" formControlName="email">
-  </div>
-
-  <div>
-    <label for="password">
-      Password
-    </label>
-    <input id="password" type="password" formControlName="password">
-  </div>
-
-  <button class="button btn-primary" type="submit">Login</button>
-
-</form>
+</div>
