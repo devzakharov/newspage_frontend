@@ -48,15 +48,22 @@
        [infiniteScrollThrottle]="10"
        (scrolled)="onScroll()"
   >
-    <article  *ngFor="let item of news" class="card">
-      <div class="card-body">
-        <h2 class="card-title">{{item.header}}</h2>
-        <sup class="card-subtitle mb-2 text-muted">{{item.date}}</sup>
-        <p class="card-text">{{item.previewText}}</p>
-        <p style="display: none;">{{item.fullText}}</p>
-        <input type="button" class="btn btn-primary" value="Читать полностью" />
+    <div class="row">
+      <div class="col-md-8">
+        <article  *ngFor="let item of news" class="card">
+          <div class="card-body">
+            <h2 class="card-title">{{item.header}}</h2>
+            <sup class="card-subtitle mb-2 text-muted">{{item.date}}</sup>
+            <p class="card-text">{{item.previewText}}</p>
+            <p style="display: none;">{{item.fullText}}</p>
+            <input type="button" class="btn btn-primary" value="Читать полностью" />
+          </div>
+        </article>
       </div>
-    </article>
+      <div class="col-md-4">
+        <app-tags-cloud></app-tags-cloud>
+      </div>
+    </div>
   </div>
 </section>
 <button class="btn btn-primary" (click)="sendRequest()">Запрос</button>

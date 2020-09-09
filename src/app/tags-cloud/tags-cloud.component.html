@@ -1,0 +1,8 @@
+<aside>
+  <h2>Облако тегов</h2>
+  <div class="tags-cloud">
+    <span class="tag" *ngFor="let item of tagCloudFilteredObject | keyvalue">
+      {{item.key + " " + item.value}}
+    </span>
+  </div>
+</aside>

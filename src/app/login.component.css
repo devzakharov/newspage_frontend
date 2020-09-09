@@ -1,0 +1,12 @@
+.form-body {
+  height: 99vh;
+  overflow: hidden;
+}
+.special-form {
+  flex-direction: column;
+  padding: 25px;
+  border: 1px solid rgba(0, 144, 144, 0.56);
+  border-radius: 13px;
+  width: 100%;
+  max-width: 400px;
+}

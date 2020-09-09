@@ -10,6 +10,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login.component';
 import {NewsComponent} from './news.component';
 import { AlertModule } from './_alert';
+import { TagsCloudComponent } from './tags-cloud/tags-cloud.component';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    NewsComponent
+    NewsComponent,
+    TagsCloudComponent
   ],
   imports: [
     BrowserModule,
