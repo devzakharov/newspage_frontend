@@ -1,10 +1,14 @@
 <aside>
-  <h2>Облако тегов</h2>
-  <div class="tags-cloud">
-    <span class="tag" *ngFor="let item of tagCloudFilteredObject | keyvalue">
-      <ng-container *ngIf="item.value > 10">
-        {{item.key + " " + item.value}}
-      </ng-container>
-    </span>
-  </div>
+      <h2 class="align-self-center">Облако тегов</h2>
+      <div class="tags-cloud">
+      </div>
+      <div>
+        <angular-tag-cloud
+          [data]="cloudData"
+          [zoomOnHover]="zoomOnHoverOptions"
+          [width]="cloudOptions.width"
+          [height]="cloudOptions.height"
+          [overflow]="cloudOptions.overflow">
+        </angular-tag-cloud>
+      </div>
 </aside>

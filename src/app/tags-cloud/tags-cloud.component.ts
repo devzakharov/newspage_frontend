@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {AlertService} from '../_alert';
 import {filter} from 'rxjs/operators';
+import {CloudData, CloudOptions, TagCloudComponent, ZoomOnHoverOptions} from 'angular-tag-cloud-module';
+import {Observable, of} from 'rxjs';
 
 @Component({
   selector: 'app-tags-cloud',
@@ -11,8 +13,24 @@ import {filter} from 'rxjs/operators';
 
 export class TagsCloudComponent implements OnInit {
 
+  cloudOptions: CloudOptions = {
+    // if width is between 0 and 1 it will be set to the width of the upper element multiplied by the value
+    width: 400,
+    // if height is between 0 and 1 it will be set to the height of the upper element multiplied by the value
+    height: 600,
+    overflow: false,
+    log: 'debug',
+  };
+
+  zoomOnHoverOptions: ZoomOnHoverOptions = {
+    scale: 1.3, // Elements will become 130 % of current zize on hover
+    transitionTime: 1.2, // it will take 1.2 seconds until the zoom level defined in scale property has been reached
+    delay: 0.0 // Zoom will take affect after 0.8 seconds
+  };
+
+  cloudData: CloudData[] = [];
+  temporaryCloudData: CloudData[] = [];
   tagCloudObject: object;
-  tagCloudFilteredObject: CloudData[] = [];
 
   options = {
     autoClose: true,
@@ -31,20 +49,27 @@ export class TagsCloudComponent implements OnInit {
   }
 
   sendRequestAndFillObject(): void {
+
+    // const changedData$: Observable<CloudData[]> = of(this.cloudData);
+
     this.http.post('http://localhost:5656/tags?getalltags=1', {}).subscribe(data => {
+
       console.log('Response: ', data);
+
       this.tagCloudObject = data;
-      let counter = 0;
+
+      // TODO передать ответственность за отсеевание тегов на бекенд
       for (const [key, value] of Object.entries(data)) {
-        if (value > 3) {
-          this.tagCloudFilteredObject[counter].text = key;
-          this.tagCloudFilteredObject[counter].weight = value;
-         // console.log(`${key}: ${value}`);
+        if (value > 8) {
+          // this.temporaryCloudData.push({text: key, weight: value, link: '/filter?tag=' + key});
+          this.temporaryCloudData.push({text: key, weight: value});
         }
-        counter++;
       }
-      console.log(this.tagCloudFilteredObject);
+
+      this.cloudData = this.temporaryCloudData;
+
       this.alertService.success(data.toString(), this.options);
+
     }, (err) => {
       console.log(err.error);
       if (Array.isArray(err.error)) {
@@ -54,11 +79,19 @@ export class TagsCloudComponent implements OnInit {
       }
     });
   }
+
+
+
 }
 
-type CloudData = {
-  text: string;
-  weight: number;
-};
+// class CloudData {
+//   text: string;
+//   weight: number;
+//
+//   constructor(text: string, weight: number) {
+//     this.text = text;
+//     this.weight = weight;
+//   }
+// }
 
 

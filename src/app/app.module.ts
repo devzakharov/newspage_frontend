@@ -11,6 +11,7 @@ import {LoginComponent} from './login.component';
 import {NewsComponent} from './news.component';
 import { AlertModule } from './_alert';
 import { TagsCloudComponent } from './tags-cloud/tags-cloud.component';
+import { TagCloudModule } from 'angular-tag-cloud-module';
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
@@ -34,7 +35,8 @@ const appRoutes: Routes = [
     InfiniteScrollModule,
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
-    AlertModule
+    AlertModule,
+    TagCloudModule
   ],
   providers: [RegisterService],
   bootstrap: [AppComponent]
