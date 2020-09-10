@@ -8,10 +8,11 @@ import {filter} from 'rxjs/operators';
   templateUrl: './tags-cloud.component.html',
   styleUrls: ['./tags-cloud.component.css']
 })
+
 export class TagsCloudComponent implements OnInit {
 
   tagCloudObject: object;
-  tagCloudFilteredObject: any;
+  tagCloudFilteredObject: CloudData[] = [];
 
   options = {
     autoClose: true,
@@ -33,11 +34,16 @@ export class TagsCloudComponent implements OnInit {
     this.http.post('http://localhost:5656/tags?getalltags=1', {}).subscribe(data => {
       console.log('Response: ', data);
       this.tagCloudObject = data;
+      let counter = 0;
       for (const [key, value] of Object.entries(data)) {
         if (value > 3) {
-          console.log(`${key}: ${value}`);
+          this.tagCloudFilteredObject[counter].text = key;
+          this.tagCloudFilteredObject[counter].weight = value;
+         // console.log(`${key}: ${value}`);
         }
+        counter++;
       }
+      console.log(this.tagCloudFilteredObject);
       this.alertService.success(data.toString(), this.options);
     }, (err) => {
       console.log(err.error);
@@ -49,4 +55,10 @@ export class TagsCloudComponent implements OnInit {
     });
   }
 }
+
+type CloudData = {
+  text: string;
+  weight: number;
+};
+
 

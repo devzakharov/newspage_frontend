@@ -2,7 +2,9 @@
   <h2>Облако тегов</h2>
   <div class="tags-cloud">
     <span class="tag" *ngFor="let item of tagCloudFilteredObject | keyvalue">
-      {{item.key + " " + item.value}}
+      <ng-container *ngIf="item.value > 10">
+        {{item.key + " " + item.value}}
+      </ng-container>
     </span>
   </div>
 </aside>
