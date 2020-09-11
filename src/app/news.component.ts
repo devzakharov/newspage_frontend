@@ -1,22 +1,35 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-class NewsItem {
+class PreviewArticleItem {
   date: string;
   header: string;
-  previewText: string;
-  fullText: string;
+  // previewText: string;
+  anonsText: string;
   done: boolean;
+  image: string;
 
-  constructor(header: string, date: string, fullText: string) {
+  constructor(header: string, date: string, anonsText: string, image: string) {
 
     this.header = header;
     this.date = date;
-    this.fullText = fullText;
-    this.previewText = fullText.slice(0, 150) + '...';
-    this.done = false;
+    this.anonsText = anonsText;
+    // this.previewText = anonsText.slice(0, 150) + '...';
+    this.image = image;
   }
 }
+
+// class FilterOptions {
+//   fromDate: string;
+//   toDate: string;
+//   author: string;
+//
+//   constructor() {
+//     this.fromDate = 'mock';
+//     this.toDate = 'mock';
+//     this.author = 'mock';
+//   }
+// }
 
 @Component({
   selector: 'app-root',
@@ -24,41 +37,37 @@ class NewsItem {
   styleUrls: ['./news.component.css']
 })
 
-export class NewsComponent {
-  title = 'newsapp';
-  name = 'name';
-  header = '';
-  date = '';
-  fullText = '';
+export class NewsComponent implements OnInit{
+  limit = 10;
+  offset = this.limit;
+  articles: PreviewArticleItem[] = [];
 
   constructor(private http: HttpClient) { }
 
-  news: NewsItem[] = [
-    new NewsItem('Сенсация', new Date(1990, 8, 29).toDateString(), 'Сегодня под мостом поймали гитлера с хвостом'),
-    new NewsItem('Молния', new Date().toDateString(), 'Внезапное событие!!'),
-    new NewsItem('Важная новость', new Date(2030, 0, 31).toDateString(), 'RIP'),
-    new NewsItem('Сенсация', new Date(1990, 8, 29).toDateString(), 'Сегодня под мостом поймали гитлера с хвостом'),
-    new NewsItem('Молния', new Date().toDateString(), 'Внезапное событие!!'),
-    new NewsItem('Важная новость', new Date(2030, 0, 31).toDateString(), 'RIP')
-  ];
-
-  addNewsItem(header: string, date: string, fullText: string): void {
-    this.news.push(new NewsItem(header, date, fullText));
+  ngOnInit(): void {
+    this.sendRequest();
   }
 
-  addFakeNews(): void {
-    this.news.push(new NewsItem('Заголовок', new Date().toDateString(), 'FullText'));
+  addPreviewArticle(header, date, anonsText, image): void {
+    this.articles.push(new PreviewArticleItem(header, date, anonsText, image));
   }
 
   sendRequest(): void {
-    this.http.post<any>('http://localhost:8080/test', { title: 'Angular POST Request Example' }).subscribe(data => {
-      console.log('Data: ', data);
+    const body = JSON.stringify({limit: this.limit, offset: this.offset});
+    this.http.post<any>('http://localhost:5656/articles', body).subscribe(data => {
+      if (data) {
+        console.log('Data: ', data);
+        data.forEach(item => {
+          this.addPreviewArticle(item.header, item.date, item.anonsText, item.image);
+        });
+        this.offset += this.limit;
+      }
     });
   }
 
   onScroll(): void {
     console.log('scrolled!!');
-    this.addFakeNews();
+    this.sendRequest();
   }
 }
 

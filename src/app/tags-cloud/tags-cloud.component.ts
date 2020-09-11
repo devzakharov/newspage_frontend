@@ -15,11 +15,10 @@ export class TagsCloudComponent implements OnInit {
 
   cloudOptions: CloudOptions = {
     // if width is between 0 and 1 it will be set to the width of the upper element multiplied by the value
-    width: 400,
+    width: 350,
     // if height is between 0 and 1 it will be set to the height of the upper element multiplied by the value
-    height: 600,
+    height: 400,
     overflow: false,
-    log: 'debug',
   };
 
   zoomOnHoverOptions: ZoomOnHoverOptions = {
@@ -60,13 +59,15 @@ export class TagsCloudComponent implements OnInit {
 
       // TODO передать ответственность за отсеевание тегов на бекенд
       for (const [key, value] of Object.entries(data)) {
-        if (value > 8) {
-          // this.temporaryCloudData.push({text: key, weight: value, link: '/filter?tag=' + key});
-          this.temporaryCloudData.push({text: key, weight: value});
-        }
+        // if (value > 8) {
+          this.temporaryCloudData.push({text: key, weight: value, link: '/filter?tag=' + key});
+          // this.temporaryCloudData.push({text: key, weight: value});
+        // }
       }
 
       this.cloudData = this.temporaryCloudData;
+
+      // this.cloudData = this.temporaryCloudData;
 
       this.alertService.success(data.toString(), this.options);
 

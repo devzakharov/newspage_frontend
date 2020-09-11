@@ -1,14 +1,12 @@
 <aside>
       <h2 class="align-self-center">Облако тегов</h2>
-      <div class="tags-cloud">
-      </div>
-      <div>
+      <div class="tag-cloud">
         <angular-tag-cloud
           [data]="cloudData"
           [zoomOnHover]="zoomOnHoverOptions"
           [width]="cloudOptions.width"
-          [height]="cloudOptions.height"
-          [overflow]="cloudOptions.overflow">
+          [overflow]="cloudOptions.overflow"
+          [height]="cloudOptions.height">
         </angular-tag-cloud>
       </div>
 </aside>
