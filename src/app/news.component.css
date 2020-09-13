@@ -14,3 +14,11 @@
 .content-section {
   padding: 15px 0;
 }
+
+.preview-image {
+  max-width: 100%;
+  height: auto;
+}
+.article-item {
+  margin-bottom: 13px;
+}

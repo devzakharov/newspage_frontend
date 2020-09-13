@@ -13,34 +13,6 @@
     </div>
   </div>
 </header>
-<section class="form-section">
-  <div class="container">
-    <div class="panel">
-      <div class="form-inline">
-        <div class="form-group">
-          <div class="">
-            <input class="form-control" [(ngModel)]="header" placeholder = "Заголовок" />
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="">
-            <input type="date" class="form-control" [(ngModel)]="date" placeholder="Дата" />
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="">
-            <input type="text" class="form-control" [(ngModel)]="fullText" placeholder="Текст" />
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="">
-            <button class="btn btn-primary" (click)="addNewsItem(header, date, fullText)">Добавить</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 <section class="content-section">
   <div class="container"
        infiniteScroll
@@ -49,21 +21,32 @@
        (scrolled)="onScroll()"
   >
     <div class="row">
-      <div class="col-md-8">
-        <article  *ngFor="let item of news" class="card">
-          <div class="card-body">
-            <h2 class="card-title">{{item.header}}</h2>
-            <sup class="card-subtitle mb-2 text-muted">{{item.date}}</sup>
-            <p class="card-text">{{item.previewText}}</p>
-            <p style="display: none;">{{item.fullText}}</p>
-            <input type="button" class="btn btn-primary" value="Читать полностью" />
+      <div class="col-md-9">
+        <h2>Новости</h2>
+        <ng-template [ngIf]="news.length > 0">
+        <article  *ngFor="let item of news" class="card article-item">
+          <div class="card-body container" data-article-id="{{item.id}}">
+            <div class="row">
+              <div class="col-md-4" *ngIf="item.image.length > 0">
+                <img src="{{item.image}}" class="preview-image">
+              </div>
+              <div class="col-md-8">
+                <h2 class="card-title">{{item.title}}</h2>
+                <sup class="card-subtitle mb-2 text-muted">{{item.publishDate}}</sup>
+                <p class="card-text">{{item.description}}</p>
+                <button mat-raised-button appTippy title="{{item.anons}}" data-article-id="{{item.id}}">Читать полностью</button>
+              </div>
+            </div>
           </div>
         </article>
+        </ng-template>
+        <ng-template [ngIf]="news.length === 0" >
+          <p>Новостей не найдено!</p>
+        </ng-template>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-3">
         <app-tags-cloud></app-tags-cloud>
       </div>
     </div>
   </div>
 </section>
-<button class="btn btn-primary" (click)="sendRequest()">Запрос</button>

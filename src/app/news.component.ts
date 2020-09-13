@@ -1,20 +1,38 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import * as moment from 'moment';
+import { MatSliderModule } from '@angular/material/slider';
 
-class NewsItem {
-  date: string;
-  header: string;
-  previewText: string;
-  fullText: string;
-  done: boolean;
+class PreviewArticleItem {
 
-  constructor(header: string, date: string, fullText: string) {
+  id: string;
+  description: string;
+  image: string;
+  title: string;
+  photo: string;
+  anons: string;
+  category: string;
+  publishDate: string;
 
-    this.header = header;
-    this.date = date;
-    this.fullText = fullText;
-    this.previewText = fullText.slice(0, 150) + '...';
-    this.done = false;
+  constructor(
+    id: string,
+    description: string,
+    image: string,
+    title: string,
+    photo: string,
+    anons: string,
+    category: string,
+    publishDate: string) {
+
+    this.id = id;
+    this.description = description;
+    this.image = image;
+    this.title = title;
+    this.photo = photo;
+    this.anons = anons;
+    this.category = category;
+    this.publishDate = publishDate;
+
   }
 }
 
@@ -24,42 +42,56 @@ class NewsItem {
   styleUrls: ['./news.component.css']
 })
 
-export class NewsComponent {
-  title = 'newsapp';
-  name = 'name';
-  header = '';
-  date = '';
-  fullText = '';
+export class NewsComponent implements OnInit {
+  offset = 0;
+  limit = 10;
+
+  news: PreviewArticleItem[] = [];
 
   constructor(private http: HttpClient) { }
 
-  news: NewsItem[] = [
-    new NewsItem('Сенсация', new Date(1990, 8, 29).toDateString(), 'Сегодня под мостом поймали гитлера с хвостом'),
-    new NewsItem('Молния', new Date().toDateString(), 'Внезапное событие!!'),
-    new NewsItem('Важная новость', new Date(2030, 0, 31).toDateString(), 'RIP'),
-    new NewsItem('Сенсация', new Date(1990, 8, 29).toDateString(), 'Сегодня под мостом поймали гитлера с хвостом'),
-    new NewsItem('Молния', new Date().toDateString(), 'Внезапное событие!!'),
-    new NewsItem('Важная новость', new Date(2030, 0, 31).toDateString(), 'RIP')
-  ];
-
-  addNewsItem(header: string, date: string, fullText: string): void {
-    this.news.push(new NewsItem(header, date, fullText));
+  ngOnInit(): void {
+    this.sendRequest();
   }
 
-  addFakeNews(): void {
-    this.news.push(new NewsItem('Заголовок', new Date().toDateString(), 'FullText'));
+  addNewsItem(
+    // tslint:disable-next-line:max-line-length
+    id: string, description: string, image: string, title: string, photo: string, anons: string, category: string, publishDate: string): void {
+    this.news.push(new PreviewArticleItem(id, description, image, title, photo, anons, category, publishDate));
   }
 
   sendRequest(): void {
-    this.http.post<any>('http://localhost:8080/test', { title: 'Angular POST Request Example' }).subscribe(data => {
+    this.http.post<any>(
+      'http://localhost:5656/articles?offset=' + this.offset + '&limit=' + this.limit,
+      {}).subscribe(data => {
       console.log('Data: ', data);
+      data.forEach(article => {
+        this.addNewsItem(
+          article.id,
+          this.b64DecodeUnicode(article.description),
+          article.image,
+          this.b64DecodeUnicode(article.title),
+          article.photo,
+          this.b64DecodeUnicode(article.anons),
+          article.category,
+          moment(article.publishDate).format('DD.MM.YYYY hh:mm')
+        );
+      });
+      this.offset += this.limit;
     });
   }
 
   onScroll(): void {
-    console.log('scrolled!!');
-    this.addFakeNews();
+    this.sendRequest();
   }
+
+  b64DecodeUnicode(str): string {
+    // Going backwards: from bytestream, to percent-encoding, to original string.
+    return decodeURIComponent(atob(str).split('').map(c => {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+  }
+
 }
 
 

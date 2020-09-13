@@ -1,0 +1,14 @@
+.tags-cloud-header {
+  text-align: left;
+}
+.tags-cloud {
+
+}
+::ng-deep .mat-chip-list-wrapper input.mat-input-element, ::ng-deep .mat-chip-list-wrapper .mat-standard-chip {
+  margin: 1px !important;
+  padding: 5px 9px;
+  font-size: 11px;
+}
+::ng-deep .mat-chip-list-wrapper {
+  padding: 5px;
+}

@@ -1,14 +1,15 @@
 <aside>
-      <h2 class="align-self-center">Облако тегов</h2>
-      <div class="tags-cloud">
-      </div>
-      <div>
-        <angular-tag-cloud
-          [data]="cloudData"
-          [zoomOnHover]="zoomOnHoverOptions"
-          [width]="cloudOptions.width"
-          [height]="cloudOptions.height"
-          [overflow]="cloudOptions.overflow">
-        </angular-tag-cloud>
+      <h2 class="tags-cloud-header">Облако тегов</h2>
+      <div class="tags-cloud card">
+        <mat-chip-list aria-label="Fish selection" >
+            <mat-chip *ngFor="let tag of cloudData">{{tag.text}}</mat-chip>
+        </mat-chip-list>
+<!--        <angular-tag-cloud-->
+<!--          [data]="cloudData"-->
+<!--          [zoomOnHover]="zoomOnHoverOptions"-->
+<!--          [width]="cloudOptions.width"-->
+<!--          [height]="cloudOptions.height"-->
+<!--          [overflow]="cloudOptions.overflow">-->
+<!--        </angular-tag-cloud>-->
       </div>
 </aside>
