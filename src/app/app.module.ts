@@ -12,6 +12,11 @@ import {NewsComponent} from './news.component';
 import { AlertModule } from './_alert';
 import { TagsCloudComponent } from './tags-cloud/tags-cloud.component';
 import { TagCloudModule } from 'angular-tag-cloud-module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { TippyModule } from 'ng-tippy';
+import {MatChipsModule} from "@angular/material/chips";
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
@@ -36,7 +41,12 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     RouterModule.forRoot(appRoutes),
     AlertModule,
-    TagCloudModule
+    TagCloudModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatTooltipModule,
+    TippyModule,
+    MatChipsModule
   ],
   providers: [RegisterService],
   bootstrap: [AppComponent]

@@ -1,21 +1,38 @@
 import {Component, OnInit} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import * as moment from 'moment';
+import { MatSliderModule } from '@angular/material/slider';
 
 class PreviewArticleItem {
-  date: string;
-  header: string;
-  // previewText: string;
-  anonsText: string;
-  done: boolean;
+
+  id: string;
+  description: string;
   image: string;
+  title: string;
+  photo: string;
+  anons: string;
+  category: string;
+  publishDate: string;
 
-  constructor(header: string, date: string, anonsText: string, image: string) {
+  constructor(
+    id: string,
+    description: string,
+    image: string,
+    title: string,
+    photo: string,
+    anons: string,
+    category: string,
+    publishDate: string) {
 
-    this.header = header;
-    this.date = date;
-    this.anonsText = anonsText;
-    // this.previewText = anonsText.slice(0, 150) + '...';
+    this.id = id;
+    this.description = description;
     this.image = image;
+    this.title = title;
+    this.photo = photo;
+    this.anons = anons;
+    this.category = category;
+    this.publishDate = publishDate;
+
   }
 }
 
@@ -37,10 +54,12 @@ class PreviewArticleItem {
   styleUrls: ['./news.component.css']
 })
 
+
 export class NewsComponent implements OnInit{
   limit = 10;
   offset = this.limit;
-  articles: PreviewArticleItem[] = [];
+  news: PreviewArticleItem[] = [];
+
 
   constructor(private http: HttpClient) { }
 
@@ -48,27 +67,44 @@ export class NewsComponent implements OnInit{
     this.sendRequest();
   }
 
-  addPreviewArticle(header, date, anonsText, image): void {
-    this.articles.push(new PreviewArticleItem(header, date, anonsText, image));
+  addNewsItem(
+    // tslint:disable-next-line:max-line-length
+    id: string, description: string, image: string, title: string, photo: string, anons: string, category: string, publishDate: string): void {
+    this.news.push(new PreviewArticleItem(id, description, image, title, photo, anons, category, publishDate));
   }
 
   sendRequest(): void {
-    const body = JSON.stringify({limit: this.limit, offset: this.offset});
-    this.http.post<any>('http://localhost:5656/articles', body).subscribe(data => {
-      if (data) {
-        console.log('Data: ', data);
-        data.forEach(item => {
-          this.addPreviewArticle(item.header, item.date, item.anonsText, item.image);
-        });
-        this.offset += this.limit;
-      }
+    this.http.post<any>(
+      'http://localhost:5656/articles?offset=' + this.offset + '&limit=' + this.limit,
+      {}).subscribe(data => {
+      console.log('Data: ', data);
+      data.forEach(article => {
+        this.addNewsItem(
+          article.id,
+          this.b64DecodeUnicode(article.description),
+          article.image,
+          this.b64DecodeUnicode(article.title),
+          article.photo,
+          this.b64DecodeUnicode(article.anons),
+          article.category,
+          moment(article.publishDate).format('DD.MM.YYYY hh:mm')
+        );
+      });
+      this.offset += this.limit;
     });
   }
 
   onScroll(): void {
-    console.log('scrolled!!');
     this.sendRequest();
   }
+
+  b64DecodeUnicode(str): string {
+    // Going backwards: from bytestream, to percent-encoding, to original string.
+    return decodeURIComponent(atob(str).split('').map(c => {
+      return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+    }).join(''));
+  }
+
 }
 
 

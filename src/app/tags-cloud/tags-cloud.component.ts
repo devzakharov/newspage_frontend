@@ -49,8 +49,6 @@ export class TagsCloudComponent implements OnInit {
 
   sendRequestAndFillObject(): void {
 
-    // const changedData$: Observable<CloudData[]> = of(this.cloudData);
-
     this.http.post('http://localhost:5656/tags?getalltags=1', {}).subscribe(data => {
 
       console.log('Response: ', data);
@@ -60,8 +58,8 @@ export class TagsCloudComponent implements OnInit {
       // TODO передать ответственность за отсеевание тегов на бекенд
       for (const [key, value] of Object.entries(data)) {
         // if (value > 8) {
-          this.temporaryCloudData.push({text: key, weight: value, link: '/filter?tag=' + key});
-          // this.temporaryCloudData.push({text: key, weight: value});
+          // this.temporaryCloudData.push({text: key, weight: value, link: '/filter?tag=' + key});
+          this.temporaryCloudData.push({text: key, weight: value});
         // }
       }
 
@@ -84,15 +82,4 @@ export class TagsCloudComponent implements OnInit {
 
 
 }
-
-// class CloudData {
-//   text: string;
-//   weight: number;
-//
-//   constructor(text: string, weight: number) {
-//     this.text = text;
-//     this.weight = weight;
-//   }
-// }
-
 
