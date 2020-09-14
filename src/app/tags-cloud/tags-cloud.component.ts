@@ -2,7 +2,7 @@ import {Component, OnInit, ViewChild} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {AlertService} from '../_alert';
 import {filter} from 'rxjs/operators';
-import {CloudData, CloudOptions, TagCloudComponent, ZoomOnHoverOptions} from 'angular-tag-cloud-module';
+import {CloudOptions, TagCloudComponent, ZoomOnHoverOptions} from 'angular-tag-cloud-module';
 import {Observable, of} from 'rxjs';
 
 @Component({
@@ -10,6 +10,7 @@ import {Observable, of} from 'rxjs';
   templateUrl: './tags-cloud.component.html',
   styleUrls: ['./tags-cloud.component.css']
 })
+
 
 export class TagsCloudComponent implements OnInit {
 
@@ -59,7 +60,7 @@ export class TagsCloudComponent implements OnInit {
       for (const [key, value] of Object.entries(data)) {
         // if (value > 8) {
           // this.temporaryCloudData.push({text: key, weight: value, link: '/filter?tag=' + key});
-          this.temporaryCloudData.push({text: key, weight: value});
+          this.temporaryCloudData.push({text: key, weight: value, selected: false});
         // }
       }
 
@@ -79,7 +80,33 @@ export class TagsCloudComponent implements OnInit {
     });
   }
 
+  changeSelected($event, tag): void {
+    tag.selected = $event.selected;
+  }
 
+  addToFilterQueryArray(tag): void {
+    console.log('added: ' + tag.text);
+    // filterOptions.tags.push(tag.text);
+  }
 
+  removeFromFilterQueryArray(tag): void {
+    console.log('removed: ' + tag.text);
+    // filterOptions.tags.push(tag.text);
+  }
+
+  tagAction(tag, chip): void {
+    if (tag.selected) {
+      chip.deselect();
+      this.removeFromFilterQueryArray(tag);
+    } else {
+      chip.selectViaInteraction();
+      this.addToFilterQueryArray(tag);
+    }
+  }
 }
 
+class CloudData {
+  text: string;
+  weight: number;
+  selected: boolean;
+}

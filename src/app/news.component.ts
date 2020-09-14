@@ -36,17 +36,33 @@ class PreviewArticleItem {
   }
 }
 
-// class FilterOptions {
-//   fromDate: string;
-//   toDate: string;
-//   author: string;
-//
-//   constructor() {
-//     this.fromDate = 'mock';
-//     this.toDate = 'mock';
-//     this.author = 'mock';
-//   }
-// }
+class FilterOptions {
+   fromDate: string;
+   toDate: string;
+   tags;
+   offset: number;
+   limit: number;
+
+   constructor() {
+     this.fromDate = '';
+     this.toDate = '';
+     this.tags = [];
+     this.offset = 0;
+     this.limit = 10;
+   }
+
+   updateOffset(): void {
+     this.offset += this.limit;
+   }
+
+   getParametersString(): string {
+     let query = '?offset=' + this.offset;
+     query += '&limit=' + this.limit;
+     query += '&fromDate=' + this.fromDate;
+     query += '&toDate=' + this.toDate;
+     return query;
+   }
+}
 
 @Component({
   selector: 'app-root',
@@ -56,8 +72,8 @@ class PreviewArticleItem {
 
 
 export class NewsComponent implements OnInit{
-  limit = 10;
-  offset = this.limit;
+
+  filterOptions: FilterOptions = new FilterOptions();
   news: PreviewArticleItem[] = [];
 
 
@@ -75,7 +91,7 @@ export class NewsComponent implements OnInit{
 
   sendRequest(): void {
     this.http.post<any>(
-      'http://localhost:5656/articles?offset=' + this.offset + '&limit=' + this.limit,
+      'http://localhost:5656/articles' + this.filterOptions.getParametersString(),
       {}).subscribe(data => {
       console.log('Data: ', data);
       data.forEach(article => {
@@ -90,7 +106,7 @@ export class NewsComponent implements OnInit{
           moment(article.publishDate).format('DD.MM.YYYY hh:mm')
         );
       });
-      this.offset += this.limit;
+      this.filterOptions.updateOffset();
     });
   }
 
@@ -99,7 +115,6 @@ export class NewsComponent implements OnInit{
   }
 
   b64DecodeUnicode(str): string {
-    // Going backwards: from bytestream, to percent-encoding, to original string.
     return decodeURIComponent(atob(str).split('').map(c => {
       return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
     }).join(''));

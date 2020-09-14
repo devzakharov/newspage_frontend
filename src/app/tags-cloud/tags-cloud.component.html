@@ -1,15 +1,13 @@
 <aside>
       <h2 class="tags-cloud-header">Облако тегов</h2>
       <div class="tags-cloud card">
-        <mat-chip-list aria-label="Fish selection" >
-            <mat-chip *ngFor="let tag of cloudData">{{tag.text}}</mat-chip>
+        <mat-chip-list  #chipList [multiple]="true" [selectable]="true" aria-label="tag selection" >
+            <mat-chip *ngFor="let tag of cloudData"
+                      #chip="matChip"
+                      (click)="tagAction(tag, chip)"
+                      [selected]="tag.selected" [selectable]="true"
+                      (selectionChange)="changeSelected($event, tag)"
+            >{{tag.text}}</mat-chip>
         </mat-chip-list>
-<!--        <angular-tag-cloud-->
-<!--          [data]="cloudData"-->
-<!--          [zoomOnHover]="zoomOnHoverOptions"-->
-<!--          [width]="cloudOptions.width"-->
-<!--          [height]="cloudOptions.height"-->
-<!--          [overflow]="cloudOptions.overflow">-->
-<!--        </angular-tag-cloud>-->
       </div>
 </aside>
