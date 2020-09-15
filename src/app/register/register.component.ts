@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import {RegisterService} from '../register.service';
+import {RegisterService} from '../../register.service';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import { AlertService } from './_alert';
+import { AlertService } from '../_alert';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 
@@ -10,7 +10,7 @@ import {catchError} from 'rxjs/operators';
 @Component({
   selector: 'app-login',
   templateUrl: './register.component.html',
-  styleUrls: ['./app.component.css', './login.component.css']
+  styleUrls: ['../app.component.css', '../login/login.component.css']
 })
 
 export class RegisterComponent implements OnInit {

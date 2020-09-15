@@ -8,7 +8,9 @@
         Архив новостей сайта rbc.ru
       </div>
       <div class="header-filter col-md-5">
-        Место для фильтра
+        <div class="float-right">
+          <app-datepicker></app-datepicker>
+        </div>
       </div>
     </div>
   </div>
@@ -23,8 +25,8 @@
     <div class="row">
       <div class="col-md-9">
         <h2>Новости</h2>
-        <ng-template [ngIf]="news.length > 0">
-        <article  *ngFor="let item of news" class="card article-item">
+        <ng-template [ngIf]="articles.length > 0">
+        <article *ngFor="let item of articles" class="card article-item">
           <div class="card-body container" data-article-id="{{item.id}}">
             <div class="row">
               <div class="col-md-4" *ngIf="item.image.length > 0">
@@ -34,13 +36,13 @@
                 <h2 class="card-title">{{item.title}}</h2>
                 <sup class="card-subtitle mb-2 text-muted">{{item.publishDate}}</sup>
                 <p class="card-text">{{item.description}}</p>
-                <button mat-raised-button appTippy title="{{item.anons}}" data-article-id="{{item.id}}">Читать полностью</button>
+                <button mat-raised-button appTippy title="{{item.anons}}" data-article-id="{{item.id}}" (click)="openArticle(item.id)">Читать полностью</button>
               </div>
             </div>
           </div>
         </article>
         </ng-template>
-        <ng-template [ngIf]="news.length === 0" >
+        <ng-template [ngIf]="articles.length === 0" >
           <p>Новостей не найдено!</p>
         </ng-template>
       </div>

@@ -4,11 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import {RegisterComponent} from './register.component';
+import {RegisterComponent} from './register/register.component';
 import {RegisterService} from '../register.service';
 import {RouterModule, Routes} from '@angular/router';
-import {LoginComponent} from './login.component';
-import {NewsComponent} from './news.component';
+import {LoginComponent} from './login/login.component';
+import {ArticlesComponent} from './articles/articles.component';
 import { AlertModule } from './_alert';
 import { TagsCloudComponent } from './tags-cloud/tags-cloud.component';
 import { TagCloudModule } from 'angular-tag-cloud-module';
@@ -16,13 +16,20 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { TippyModule } from 'ng-tippy';
-import {MatChipsModule} from "@angular/material/chips";
+import {MatChipsModule} from '@angular/material/chips';
+import {SharedService} from './services/shared.service';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/material/form-field';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
+
 
 const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent},
   { path: 'login', component: LoginComponent},
-  { path: '', component: AppComponent},
-  { path: 'app', component: NewsComponent}
+  // { path: '', component: AppComponent},
+  { path: '', redirectTo: '/app', pathMatch: 'full'},
+  { path: 'app', component: ArticlesComponent}
 ];
 
 @NgModule({
@@ -30,8 +37,9 @@ const appRoutes: Routes = [
     AppComponent,
     RegisterComponent,
     LoginComponent,
-    NewsComponent,
-    TagsCloudComponent
+    ArticlesComponent,
+    TagsCloudComponent,
+    DatepickerComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +54,19 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatTooltipModule,
     TippyModule,
-    MatChipsModule
+    MatChipsModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatNativeDateModule,
   ],
-  providers: [RegisterService],
+  providers: [
+    RegisterService,
+    SharedService,
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+    { provide: MAT_DATE_LOCALE, useValue: 'ru-RU' },
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
