@@ -7,6 +7,7 @@ import { PreviewArticle } from '../domain/PreviewArticle';
 import {SharedService} from '../services/shared.service';
 import {EventEmitterService} from '../services/event.emitter.service';
 import {MatDialog} from '@angular/material/dialog';
+import {FullArticleComponent} from '../article-full/full-article.component';
 
 
 @Component({
@@ -83,14 +84,14 @@ export class ArticlesComponent implements OnInit{
     }).join(''));
   }
 
-  // TODO create full article content component
-  openArticle(id: string): void {
-    const dialogRef = this.dialog.open(ArticlesComponent);
+  openFullArticle(id): void {
 
-    dialogRef.afterClosed().subscribe(result => {
-      console.log(`Dialog result: ${result} + ${id}`);
-    });
+    console.log('From openFullArticle ' + id);
+    const dialogRef = this.dialog.open(FullArticleComponent, { data : id });
+    console.log(dialogRef);
   }
+
+
 }
 
 

@@ -1,0 +1,2658 @@
+::ng-deep .article__about-authors {
+  margin-top: 20px;
+  margin-bottom: 10px
+}
+
+::ng-deep .article__about-authors__title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  margin-bottom: 15px
+}
+
+::ng-deep .article__about-authors__link {
+  display: block;
+  margin-bottom: 26px
+}
+
+::ng-deep .article__about-authors__image-block {
+  display: table-cell;
+  vertical-align: middle
+}
+
+::ng-deep .article__about-authors__image-wrap {
+  display: block;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #faf9f1;
+  overflow: hidden
+}
+
+::ng-deep .article__about-authors__image {
+  display: block;
+  max-width: 100%
+}
+
+::ng-deep .article__about-authors__text-block {
+  display: table-cell;
+  vertical-align: middle;
+  padding-left: 15px;
+  font-size: 18px;
+  line-height: 26px
+}
+
+::ng-deep .article__about-authors__name {
+  font-family: Kazimir-Semibold-Italic, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__about-authors__subname {
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  font-style: italic
+}
+
+::ng-deep .article__about-authors__desc {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  color: #5e5e5e
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a::ng-deep .article__about-authors__link:hover ::ng-deep .article__about-authors__name {
+    opacity: .7
+  }
+}
+
+::ng-deep .article__aggregator {
+  display: none;
+  margin: 9px 0 29px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, .2)
+}
+
+::ng-deep .article__aggregator_margin {
+  margin-top: 26px
+}
+
+::ng-deep .article__aggregator__wrap {
+  overflow: hidden
+}
+
+::ng-deep .article__aggregator__link {
+  display: block;
+  font: normal 14px/18px GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  background: 0 0 !important
+}
+
+::ng-deep .article__aggregator__link:after, ::ng-deep .article__aggregator__link:before {
+  content: " ";
+  display: table
+}
+
+::ng-deep .article__aggregator__link:after {
+  clear: both
+}
+
+::ng-deep .article__aggregator__title-wrap {
+  float: left;
+  width: 100%;
+  padding: 13px 0 11px 9px
+}
+
+::ng-deep .article__aggregator__title {
+  display: block;
+  position: relative;
+  padding-left: 33px;
+  margin-right: 152px
+}
+
+::ng-deep .article__aggregator__title:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 22px;
+  height: 16px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/aggregator/images/icon.svg) no-repeat;
+  background-size: 22px 16px
+}
+
+::ng-deep .article__aggregator__button-wrap {
+  float: right;
+  width: 127px;
+  padding: 1px 0;
+  margin: 11px 0 11px -127px;
+  border-left: 1px solid #ddd;
+  text-align: center
+}
+
+::ng-deep .article__aggregator__button {
+  display: block;
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__aggregator__link:hover {
+    opacity: 1 !important
+  }
+
+  ::ng-deep .article__aggregator__link:hover ::ng-deep .article__aggregator__button {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__aggregator {
+    margin: 4px 0 24px
+  }
+
+  ::ng-deep .article__aggregator_margin {
+    margin-top: 21px
+  }
+
+  ::ng-deep .article__aggregator__link {
+    padding: 0 20px
+  }
+
+  ::ng-deep .article__aggregator__title-wrap {
+    float: none;
+    display: block;
+    padding: 16px 0
+  }
+
+  ::ng-deep .article__aggregator__title {
+    margin-right: 0
+  }
+
+  ::ng-deep .article__aggregator__button-wrap {
+    float: none;
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    margin: 0;
+    border-left: none;
+    border-top: 1px solid #ddd
+  }
+}
+
+::ng-deep .article__authors {
+  margin-bottom: 25px;
+  font-size: 14px;
+  line-height: 20px
+}
+
+::ng-deep .article__authors__row {
+  margin-bottom: 12px
+}
+
+::ng-deep .article__authors__name {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__authors {
+    margin-bottom: 20px
+  }
+}
+
+::ng-deep .article__black-photoreport-image {
+  position: relative;
+  margin: 22px 0
+}
+
+::ng-deep .article__black-photoreport-image__wrap {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  max-width: 100%;
+  cursor: pointer
+}
+
+::ng-deep .article__black-photoreport-image__image {
+  display: block;
+  max-width: 100%
+}
+
+::ng-deep .article__black-photoreport-image__title {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: #999;
+  margin: 13px 0 -1px
+}
+
+::ng-deep .article__black-photoreport-image__title p {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  margin-bottom: 8px
+}
+
+::ng-deep .article__black-photoreport-image__title ul {
+  margin: 0 0 8px 20px
+}
+
+::ng-deep .article__black-photoreport-image__title ul li {
+  margin: 0 0 3px 0;
+  list-style: disc
+}
+
+::ng-deep .article__black-photoreport-image__title ol {
+  margin: 0 0 8px 33px
+}
+
+::ng-deep .article__black-photoreport-image__title ol li {
+  margin: 0 0 3px 0;
+  list-style: decimal
+}
+
+::ng-deep .article__black-photoreport-image__title b, ::ng-deep .article__black-photoreport-image__title strong {
+  font-weight: 700
+}
+
+::ng-deep .article__black-photoreport-image__title em, ::ng-deep .article__black-photoreport-image__title i {
+  font-style: italic
+}
+
+::ng-deep .article__black-photoreport-image__title a {
+  background: linear-gradient(to bottom, #222 50%, #222 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__black-photoreport-image__title a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__black-photoreport-image {
+    margin: 19px 0 18px
+  }
+}
+
+::ng-deep .article__downloadable {
+  margin-bottom: 17px
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__downloadable {
+    margin-bottom: 14px
+  }
+}
+
+::ng-deep .article__dzen {
+  position: relative;
+  margin-top: -1px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fafafa;
+  z-index: 18
+}
+
+::ng-deep .article__dzen__inner {
+  position: relative
+}
+
+::ng-deep .article__dzen .zen-widget.widget {
+  background: #fafafa;
+  padding-top: 28px !important;
+  padding-bottom: 31px !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget__header {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif !important;
+  margin-left: 25px !important;
+  margin-bottom: 17px !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget__header-desc, ::ng-deep .article__dzen .zen-widget.widget__header-icon {
+  display: none !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget__header-info {
+  margin: 0 !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget__header-logo {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif !important;
+  font-size: 24px !important;
+  line-height: 24px !important;
+  letter-spacing: -.5px;
+  color: #222 !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget-invite-card {
+  margin-right: 25px !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget .docdomain-logo, ::ng-deep .article__dzen .zen-widget.widget .widgettitle-logo, ::ng-deep .article__dzen .zen-widget.widget-card_dislike-overlay-text, ::ng-deep .article__dzen .zen-widget.widget-card_title, ::ng-deep .article__dzen .zen-widget.widget-invite-cardtitle, ::ng-deep .article__dzen .zen-widget.widget-invite-cardto-feed {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget-card__domain-logo {
+  letter-spacing: 1.3px !important
+}
+
+::ng-deep .article__dzen .zen-widget.widget-invite-card_low, ::ng-deep .article__dzen .zen-widget.widget-invite-card_to-feed {
+  text-transform: uppercase;
+  font-weight: 700
+}
+
+::ng-deep .article__dzen .zen-widget .scroller__cards-scroller._type_horizontal {
+  padding-left: 25px !important
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__dzen .zen-widget.widget {
+    padding-top: 24px !important;
+    padding-bottom: 26px !important
+  }
+
+  ::ng-deep .article__dzen .zen-widget.widget__header {
+    margin-left: 20px !important
+  }
+
+  ::ng-deep .article__dzen .zen-widget.widget__header-logo {
+    font-size: 22px !important;
+    line-height: 22px !important
+  }
+
+  ::ng-deep .article__dzen .zen-widget .scroller__cards-scroller._type_horizontal {
+    padding-left: 20px !important
+  }
+}
+
+::ng-deep .article__header {
+  padding-top: 26px
+}
+
+::ng-deep .article__header__title {
+  margin-bottom: 13px;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 46px;
+  letter-spacing: -.5px
+}
+
+::ng-deep .article__header__title-in {
+  display: inline
+}
+
+::ng-deep .article__header__subtitle {
+  font-weight: 400
+}
+
+::ng-deep .article__header__icon_video {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 50px;
+  height: 30px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/header/images/video-icon.svg) no-repeat;
+  background-size: 50px 30px
+}
+
+::ng-deep .article__header__info-block {
+  margin-bottom: 16px;
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  font-size: 0
+}
+
+::ng-deep .article__header__category {
+  font-size: 14px;
+  line-height: 20px
+}
+
+::ng-deep .article__header__category_spec {
+  padding-bottom: 5px;
+  background: linear-gradient(to bottom, #1b8 50%, #1b8 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 2px 2px
+}
+
+::ng-deep .article__header__date, ::ng-deep .article__header__extra {
+  padding-right: 15px;
+  font-size: 14px;
+  line-height: 20px
+}
+
+::ng-deep .article__header__after {
+  padding-right: 15px;
+  font-size: 14px;
+  line-height: 20px;
+  border-left: 1px solid #ddd
+}
+
+::ng-deep .article__header__counter-block {
+  display: none;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 20px
+}
+
+::ng-deep .article__header__counter {
+  height: 20px;
+  padding: 0 15px 0 20px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/header/images/eye.svg) no-repeat 0 center;
+  background-size: 15px 11px
+}
+
+::ng-deep .article__header__share-block {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer
+}
+
+::ng-deep .article__header__share-block__pseudo {
+  display: none;
+  position: absolute;
+  top: -14px;
+  left: -20px;
+  bottom: -15px;
+  width: 150px;
+  z-index: 3
+}
+
+::ng-deep .article__header__share-block:hover:not(.disabled-hover) ::ng-deep .article__header__share {
+  display: block
+}
+
+::ng-deep .article__header__share-block::ng-deep .active ::ng-deep .article__header__share {
+  display: block
+}
+
+::ng-deep .article__header__share-block::ng-deep .active-right ::ng-deep .article__header__share, ::ng-deep .article__header__share-block::ng-deep .active-right ::ng-deep .article__header__share-block__pseudo {
+  right: -23px;
+  left: auto
+}
+
+::ng-deep .article__header__share-icon {
+  display: inline-block;
+  vertical-align: top;
+  min-width: 107px;
+  height: 20px;
+  padding: 0 24px 0 0;
+  font-size: 14px;
+  line-height: 20px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/header/images/arrow.svg) no-repeat right center;
+  background-size: 16px 14px
+}
+
+::ng-deep .article__header__share {
+  display: none;
+  position: absolute;
+  top: -14px;
+  left: -20px;
+  width: 150px;
+  padding: 14px 20px 13px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, .2);
+  z-index: 2;
+  cursor: auto
+}
+
+::ng-deep .article__header__lable {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1px 5px;
+  margin-right: 15px;
+  font-size: 11px;
+  line-height: 15px;
+  background: #1b8;
+  color: #fff
+}
+
+::ng-deep .article__header__special {
+  padding-bottom: 15px;
+  line-height: 16px
+}
+
+::ng-deep .article__header_spec {
+  padding-top: 23px
+}
+
+::ng-deep .article__header_spec ::ng-deep .article__header__info-block {
+  margin-bottom: 13px
+}
+
+::ng-deep .article__header_spec ::ng-deep .article__header__after, ::ng-deep .article__header_spec ::ng-deep .article__header__category, ::ng-deep .article__header_spec ::ng-deep .article__header__counter-block, ::ng-deep .article__header_spec ::ng-deep .article__header__date, ::ng-deep .article__header_spec ::ng-deep .article__header__extra, ::ng-deep .article__header_spec ::ng-deep .article__header__share-icon {
+  line-height: 26px
+}
+
+::ng-deep .article__header_spec ::ng-deep .article__header__counter, ::ng-deep .article__header_spec ::ng-deep .article__header__share-icon {
+  height: 26px
+}
+
+::ng-deep .article__header_spec ::ng-deep .article__header__share-icon:not(::ng-deep .article__header__share-icon_main) {
+  margin: -3px 0
+}
+
+::ng-deep .article__header_spec ::ng-deep .article__header__share {
+  top: -11px
+}
+
+::ng-deep .article__header_spec ::ng-deep .article__header__share-block__pseudo {
+  top: -11px
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a::ng-deep .article__header__category:hover {
+    opacity: .7
+  }
+
+  a::ng-deep .article__header__lable:hover {
+    background: #13a87b
+  }
+}
+
+@media (max-width: 980px) {
+  ::ng-deep .article__header__share-block::ng-deep .active ::ng-deep .article__header__share-block__pseudo {
+    display: block
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__header__title {
+    margin-bottom: 16px;
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: normal
+  }
+
+  ::ng-deep .article__header__info-block {
+    margin-bottom: 17px
+  }
+
+  ::ng-deep .article__header__icon_video {
+    width: 33px;
+    height: 21px;
+    background-size: 33px 21px
+  }
+
+  ::ng-deep .article__header__counter-block {
+    display: none
+  }
+
+  ::ng-deep .article__header__share-icon_main {
+    min-width: 0;
+    padding: 0 16px 0 0
+  }
+
+  ::ng-deep .article__header_spec {
+    padding-top: 19px
+  }
+
+  ::ng-deep .article__header_spec ::ng-deep .article__header__info-block {
+    margin-bottom: 14px
+  }
+}
+
+::ng-deep .article__inline-item {
+  padding: 20px 0 25px;
+  border-bottom: 1px solid #ddd;
+  margin: 22px 0 26px;
+  border-top: 1px solid #ddd;
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 0;
+  line-height: 0
+}
+
+::ng-deep .article__inline-item__wrap {
+  min-height: 117px;
+  position: relative;
+  padding: 0 25px;
+  display: flex;
+  flex-direction: row;
+  margin: 0 -25px
+}
+
+::ng-deep .article__inline-item__content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column
+}
+
+::ng-deep .article__inline-item__bottom {
+  white-space: nowrap
+}
+
+::ng-deep .article__inline-item__category {
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+  white-space: normal;
+  background: 0 0 !important
+}
+
+::ng-deep .article__inline-item__link {
+  display: block;
+  background: 0 0 !important
+}
+
+::ng-deep .article__inline-item__link:after, ::ng-deep .article__inline-item__link:before {
+  content: " ";
+  display: table
+}
+
+::ng-deep .article__inline-item__link:after {
+  clear: both
+}
+
+::ng-deep .article__inline-item__title {
+  font: normal 24px/28px GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  display: block;
+  padding-bottom: 24px
+}
+
+::ng-deep .article__inline-item__info {
+  display: block
+}
+
+::ng-deep .article__inline-item__info > * {
+  vertical-align: middle
+}
+
+::ng-deep .article__inline-item__info__text {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__inline-item__button {
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+  font-family: GraphikCy-Medium, 'Helvetica CY', Arial, sans-serif;
+  font-size: 12px;
+  color: #222;
+  padding: 4px 10px 3px 10px;
+  line-height: 1;
+  margin-left: 8px;
+  border: 1px solid #ddd;
+  border-bottom-width: 2px;
+  border-radius: 3px
+}
+
+::ng-deep .article__inline-item__image-block {
+  position: relative;
+  width: 180px;
+  padding-top: 5px;
+  flex-shrink: 0;
+  margin-left: 20px
+}
+
+::ng-deep .article__inline-item__image {
+  display: block;
+  max-width: 100%
+}
+
+::ng-deep .article__inline-item__author {
+  font-size: 24px;
+  line-height: 28px;
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__inline-item__image-block-author {
+  display: inline-block;
+  vertical-align: top;
+  width: 35px;
+  height: 35px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: #faf9f1;
+  overflow: hidden
+}
+
+::ng-deep .article__inline-item__image-author {
+  display: block;
+  max-height: 100%
+}
+
+::ng-deep .article__inline-item__icon-mobile {
+  display: none
+}
+
+@media (hover: hover) and (pointer: fine) {
+  a::ng-deep .article__inline-item__category:hover {
+    opacity: .7
+  }
+
+  ::ng-deep .article__inline-item__link:hover {
+    opacity: 1 !important
+  }
+
+  ::ng-deep .article__inline-item__link:hover ::ng-deep .article__inline-item__author, ::ng-deep .article__inline-item__link:hover ::ng-deep .article__inline-item__button, ::ng-deep .article__inline-item__link:hover ::ng-deep .article__inline-item__title {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__inline-item {
+    padding: 22px 0 20px;
+    margin: 18px 0 22px;
+    padding-top: 18px
+  }
+
+  ::ng-deep .article__inline-item__wrap {
+    min-height: 0;
+    padding: 0 20px;
+    margin: 0 -20px
+  }
+
+  ::ng-deep .article__inline-item__content {
+    flex-direction: column-reverse
+  }
+
+  ::ng-deep .article__inline-item__bottom {
+    margin-bottom: 7px
+  }
+
+  ::ng-deep .article__inline-item__title {
+    font: normal 22px/24px GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+    padding-bottom: 0
+  }
+
+  ::ng-deep .article__inline-item__title_author {
+    font-family: Kazimir, 'Helvetica CY', Arial, sans-serif
+  }
+
+  ::ng-deep .article__inline-item__image-block {
+    display: none !important
+  }
+
+  ::ng-deep .article__inline-item__image-block-author {
+    margin-top: -2px;
+    width: 25px;
+    height: 25px
+  }
+
+  ::ng-deep .article__inline-item__icon-mobile {
+    display: inline-block
+  }
+}
+
+::ng-deep .article__inline-picture {
+  float: left;
+  max-width: 100%;
+  margin: 5px 0 26px
+}
+
+::ng-deep .article__inline-picture__wrap {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%
+}
+
+::ng-deep .article__inline-picture__image {
+  display: block;
+  margin-right: 15px
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__inline-picture {
+    margin: 4px 0 22px
+  }
+}
+
+::ng-deep .article__inline-table {
+  display: block;
+  position: relative;
+  margin: 5px 0 26px;
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 13px;
+  overflow: auto;
+  width: auto;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd
+}
+
+::ng-deep .article__inline-table:after, ::ng-deep .article__inline-table:before {
+  content: " ";
+  display: table
+}
+
+::ng-deep .article__inline-table:after {
+  clear: both
+}
+
+::ng-deep .article__inline-table-inner {
+  width: 100%
+}
+
+::ng-deep .article__inline-table td, ::ng-deep .article__inline-table tr {
+  boarder-collapse: collapse
+}
+
+::ng-deep .article__inline-table tr {
+  border-bottom: 1px solid #ddd
+}
+
+::ng-deep .article__inline-table__title {
+  vertical-align: top;
+  text-align: left;
+  padding: 15px 25px;
+  outline: 0
+}
+
+::ng-deep .article__inline-table__title-nobold {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  margin-top: 5px;
+  display: block
+}
+
+::ng-deep .article__inline-table__main-header {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  color: #222;
+  line-height: 1
+}
+
+::ng-deep .article__inline-table__main-link {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  display: block;
+  color: #222 !important;
+  text-decoration: none;
+  cursor: pointer
+}
+
+::ng-deep .article__inline-table__main-link__underline {
+  border-bottom: 1px dotted #222;
+  line-height: 1
+}
+
+::ng-deep .article__inline-table__td {
+  vertical-align: middle;
+  text-align: left;
+  padding: 15px 25px;
+  line-height: 1.2
+}
+
+::ng-deep .article__inline-table__td_center {
+  text-align: center
+}
+
+::ng-deep .article__inline-table__td_right {
+  text-align: right;
+  padding-right: 25px
+}
+
+::ng-deep .article__inline-table__toggle__name {
+  display: block;
+  margin-right: 18px
+}
+
+::ng-deep .article__inline-table__arrow {
+  font-size: 0;
+  line-height: 0;
+  vertical-align: top;
+  height: 6px;
+  width: 7px;
+  margin: 3px 0 0 -10px;
+  float: left
+}
+
+::ng-deep .article__inline-table__arrow-up {
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/arrow-up.png) no-repeat;
+  display: none
+}
+
+::ng-deep .article__inline-table__arrow-down {
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/arrow-down.png) no-repeat
+}
+
+::ng-deep .article__inline-table__h-arrow-down {
+  display: none
+}
+
+::ng-deep .article__inline-table__link {
+  color: #1b8;
+  text-decoration: none;
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__inline-table__minus, ::ng-deep .article__inline-table__plus {
+  float: right;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  height: 13px;
+  margin-right: -25px;
+  width: 13px
+}
+
+::ng-deep .article__inline-table__plus {
+  display: block;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/plus.png) no-repeat
+}
+
+::ng-deep .article__inline-table__minus {
+  display: none;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/minus.png) no-repeat
+}
+
+::ng-deep .article__inline-table__rub {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+  vertical-align: middle;
+  height: 22px;
+  width: 12px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/rub.png) no-repeat
+}
+
+::ng-deep .article__inline-table__description {
+  padding: 10px 25px 16px;
+  display: table-cell;
+  font-size: 13px;
+  line-height: 1.6
+}
+
+::ng-deep .article__inline-table__description p {
+  font-size: 13px !important;
+  line-height: 1.6 !important;
+  margin-bottom: 0 !important
+}
+
+::ng-deep .article__inline-table__description__padding {
+  width: 5%;
+  display: table-cell
+}
+
+::ng-deep .article__inline-table__description-block {
+  background: #fafafa;
+  width: 100%;
+  display: table
+}
+
+::ng-deep .article__inline-table__img {
+  display: block;
+  width: 150px;
+  border: 1px solid #ddd;
+  margin-bottom: 7px
+}
+
+::ng-deep .article__inline-table__big-red {
+  font-size: 18px;
+  color: maroon
+}
+
+::ng-deep .article__inline-table__big-red ::ng-deep .article__inline-table__minus, ::ng-deep .article__inline-table__big-red ::ng-deep .article__inline-table__plus {
+  margin-top: 5px
+}
+
+::ng-deep .article__inline-table__bold {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__inline-table ::ng-deep .active {
+  background: #f0f0f0
+}
+
+::ng-deep .article__inline-table ::ng-deep .active ::ng-deep .article__inline-table__minus {
+  display: block
+}
+
+::ng-deep .article__inline-table ::ng-deep .active ::ng-deep .article__inline-table__plus {
+  display: none
+}
+
+::ng-deep .article__inline-table .tablesorter-headerAsc, ::ng-deep .article__inline-table .tablesorter-headerDesc {
+  background: #f0fcf9
+}
+
+::ng-deep .article__inline-table .tablesorter-headerDesc ::ng-deep .article__inline-table__arrow-down {
+  height: 6px;
+  width: 7px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/arrow-down-black.png) no-repeat;
+  margin-top: 3px;
+  display: block
+}
+
+::ng-deep .article__inline-table .tablesorter-headerAsc ::ng-deep .article__inline-table__arrow-up {
+  display: block;
+  height: 6px;
+  width: 7px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/arrow-up-black.png) no-repeat;
+  margin-top: 3px
+}
+
+::ng-deep .article__inline-table .tablesorter-headerAsc ::ng-deep .article__inline-table__arrow-down {
+  display: none
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__inline-table__link:hover {
+    color: #1b8 !important
+  }
+
+  ::ng-deep .article__inline-table__title:hover ::ng-deep .article__inline-table__arrow-down {
+    background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/news/article/inline-table/images/arrow-down-black.png) no-repeat
+  }
+
+  ::ng-deep .article__inline-table__trigger:hover {
+    background: #f0f0f0
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__inline-table {
+    margin: 4px 0 22px
+  }
+
+  ::ng-deep .article__inline-table__title {
+    padding: 15px 20px
+  }
+
+  ::ng-deep .article__inline-table__td {
+    padding: 10px 20px
+  }
+
+  ::ng-deep .article__inline-table__minus, ::ng-deep .article__inline-table__plus {
+    margin-right: -20px
+  }
+
+  ::ng-deep .article__inline-table__description {
+    padding: 10px 20px 16px
+  }
+}
+
+::ng-deep .article__inline-video {
+  margin: 30px 0 0
+}
+
+::ng-deep .article__inline-video__video {
+  display: block
+}
+
+::ng-deep .article__inline-video__video iframe {
+  width: 100%;
+  height: 100%
+}
+
+::ng-deep .article__inline-video__link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer
+}
+
+::ng-deep .article__inline-video__link > img {
+  margin: 0;
+  display: block;
+  width: 100%
+}
+
+::ng-deep .article__inline-video__timeline {
+  margin-top: 10px
+}
+
+::ng-deep .article__inline-video__timeline__table {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  display: table
+}
+
+::ng-deep .article__inline-video__timeline__item {
+  margin: 10px 0;
+  display: flex;
+  cursor: pointer
+}
+
+::ng-deep .article__inline-video__timeline__time {
+  display: table-cell;
+  text-align: left;
+  color: #999
+}
+
+::ng-deep .article__inline-video__timeline__title {
+  display: table-cell;
+  text-align: left;
+  padding-left: 10px
+}
+
+::ng-deep .article__inline-video__info {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: #999;
+  margin: 13px 0 -1px
+}
+
+::ng-deep .article__inline-video__info p {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  margin-bottom: 8px
+}
+
+::ng-deep .article__inline-video__info ul {
+  margin: 0 0 8px 20px
+}
+
+::ng-deep .article__inline-video__info ul li {
+  margin: 0 0 3px 0;
+  list-style: disc
+}
+
+::ng-deep .article__inline-video__info ol {
+  margin: 0 0 8px 33px
+}
+
+::ng-deep .article__inline-video__info ol li {
+  margin: 0 0 3px 0;
+  list-style: decimal
+}
+
+::ng-deep .article__inline-video__info b, ::ng-deep .article__inline-video__info strong {
+  font-weight: 700
+}
+
+::ng-deep .article__inline-video__info em, ::ng-deep .article__inline-video__info i {
+  font-style: italic
+}
+
+::ng-deep .article__inline-video__info a {
+  background: linear-gradient(to bottom, #222 50%, #222 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px
+}
+
+::ng-deep .article__inline-video__author, ::ng-deep .article__inline-video__text {
+  display: inline
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__inline-video__timeline__item:hover ::ng-deep .article__inline-video__timeline__title {
+    opacity: .7
+  }
+
+  ::ng-deep .article__inline-video__info a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__inline-video {
+    margin: 25px 0 0
+  }
+}
+
+::ng-deep .article__main-image {
+  margin: 22px 0
+}
+
+::ng-deep .article__main-image__image {
+  display: block;
+  max-width: 100%
+}
+
+::ng-deep .article__main-image__title {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: #999;
+  margin: 13px 0 -1px
+}
+
+::ng-deep .article__main-image__title p {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  margin-bottom: 8px
+}
+
+::ng-deep .article__main-image__title ul {
+  margin: 0 0 8px 20px
+}
+
+::ng-deep .article__main-image__title ul li {
+  margin: 0 0 3px 0;
+  list-style: disc
+}
+
+::ng-deep .article__main-image__title ol {
+  margin: 0 0 8px 33px
+}
+
+::ng-deep .article__main-image__title ol li {
+  margin: 0 0 3px 0;
+  list-style: decimal
+}
+
+::ng-deep .article__main-image__title b, ::ng-deep .article__main-image__title strong {
+  font-weight: 700
+}
+
+::ng-deep .article__main-image__title em, ::ng-deep .article__main-image__title i {
+  font-style: italic
+}
+
+::ng-deep .article__main-image__title a {
+  background: linear-gradient(to bottom, #222 50%, #222 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__main-image__title a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__main-image {
+    margin: 19px 0 18px
+  }
+}
+
+::ng-deep .article__note {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  padding: 24px 30px;
+  margin: 22px 0 28px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, .2);
+  padding-top: 27px
+}
+
+::ng-deep .article__note p {
+  font-size: 16px !important;
+  line-height: 24px !important;
+  margin-bottom: 18px !important
+}
+
+::ng-deep .article__note ul {
+  margin: 0 0 18px 20px !important
+}
+
+::ng-deep .article__note ul li {
+  margin: 0 0 13px 0 !important
+}
+
+::ng-deep .article__note ol {
+  margin: 0 0 18px 33px !important
+}
+
+::ng-deep .article__note ol li {
+  margin: 0 0 13px 0 !important
+}
+
+::ng-deep .article__note b, ::ng-deep .article__note strong {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif !important;
+  font-weight: 400 !important
+}
+
+::ng-deep .article__note > p:last-child {
+  margin-bottom: 0 !important
+}
+
+::ng-deep .article__note__title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 26px
+}
+
+::ng-deep .article__note ::ng-deep .article__subheader, ::ng-deep .article__note h2, ::ng-deep .article__note h3, ::ng-deep .article__note h4, ::ng-deep .article__note h5, ::ng-deep .article__note h6 {
+  margin: 0 0 2px
+}
+
+::ng-deep .article__note ::ng-deep .article__subheader p, ::ng-deep .article__note h2 p, ::ng-deep .article__note h3 p, ::ng-deep .article__note h4 p, ::ng-deep .article__note h5 p, ::ng-deep .article__note h6 p {
+  margin: 0 !important;
+  line-height: 20px !important
+}
+
+::ng-deep .article__note ::ng-deep .article__subheader *, ::ng-deep .article__note h2, ::ng-deep .article__note h3, ::ng-deep .article__note h4, ::ng-deep .article__note h5, ::ng-deep .article__note h6 {
+  font: normal 16px/20px GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif !important
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__note a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__note {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    padding: 14px 20px;
+    margin: 18px 0 24px;
+    padding-top: 17px
+  }
+
+  ::ng-deep .article__note p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    margin-bottom: 9px !important
+  }
+
+  ::ng-deep .article__note ul {
+    margin: 0 0 9px 20px !important
+  }
+
+  ::ng-deep .article__note ul li {
+    margin: 0 0 9px 0 !important
+  }
+
+  ::ng-deep .article__note ol {
+    margin: 0 0 9px 33px !important
+  }
+
+  ::ng-deep .article__note ol li {
+    margin: 0 0 9px 0 !important
+  }
+
+  ::ng-deep .article__note__title {
+    margin-bottom: 11px;
+    font-size: 18px;
+    line-height: 22px
+  }
+
+  ::ng-deep .article__note ::ng-deep .article__subheader, ::ng-deep .article__note h2, ::ng-deep .article__note h3, ::ng-deep .article__note h4, ::ng-deep .article__note h5, ::ng-deep .article__note h6 {
+    margin: 0 0 3px
+  }
+
+  ::ng-deep .article__note ::ng-deep .article__subheader p, ::ng-deep .article__note h2 p, ::ng-deep .article__note h3 p, ::ng-deep .article__note h4 p, ::ng-deep .article__note h5 p, ::ng-deep .article__note h6 p {
+    line-height: 18px !important
+  }
+
+  ::ng-deep .article__note ::ng-deep .article__subheader *, ::ng-deep .article__note h2, ::ng-deep .article__note h3, ::ng-deep .article__note h4, ::ng-deep .article__note h5, ::ng-deep .article__note h6 {
+    font-size: 14px !important;
+    line-height: 18px !important
+  }
+}
+
+::ng-deep .article__opinion {
+  font-size: 44px;
+  line-height: 46px;
+  letter-spacing: -.5px;
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__opinion {
+    font-size: 28px;
+    line-height: 30px
+  }
+}
+
+::ng-deep .article__picture {
+  margin: 22px 0
+}
+
+::ng-deep .article__picture_margin {
+  margin: -8px -15px 0
+}
+
+::ng-deep .article__picture__image {
+  display: block;
+  max-width: 100%
+}
+
+::ng-deep .article__picture__title {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: #999;
+  margin: 13px 0 -1px
+}
+
+::ng-deep .article__picture__title p {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  margin-bottom: 8px
+}
+
+::ng-deep .article__picture__title ul {
+  margin: 0 0 8px 20px
+}
+
+::ng-deep .article__picture__title ul li {
+  margin: 0 0 3px 0;
+  list-style: disc
+}
+
+::ng-deep .article__picture__title ol {
+  margin: 0 0 8px 33px
+}
+
+::ng-deep .article__picture__title ol li {
+  margin: 0 0 3px 0;
+  list-style: decimal
+}
+
+::ng-deep .article__picture__title b, ::ng-deep .article__picture__title strong {
+  font-weight: 700
+}
+
+::ng-deep .article__picture__title em, ::ng-deep .article__picture__title i {
+  font-style: italic
+}
+
+::ng-deep .article__picture__title a {
+  background: linear-gradient(to bottom, #222 50%, #222 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__picture__title a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__picture {
+    margin: 18px 0
+  }
+
+  ::ng-deep .article__picture_margin {
+    margin: 18px 0
+  }
+}
+
+::ng-deep .article__slider {
+  min-height: 100px;
+  overflow: hidden;
+  position: relative;
+  line-height: 1.2;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 0 30px;
+  margin: 30px 0
+}
+
+::ng-deep .article__slider__item {
+  width: 100%;
+  position: absolute;
+  background: #fff;
+  padding: 20px 0;
+  left: 10000px;
+  top: 0
+}
+
+::ng-deep .article__slider__item:first-child {
+  left: 0
+}
+
+::ng-deep .article__slider__item__img {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  float: left
+}
+
+::ng-deep .article__slider__item__content {
+  margin-left: 100px
+}
+
+::ng-deep .article__slider__item__title {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  font-size: 20px
+}
+
+::ng-deep .article__slider__item__desc {
+  padding: 8px 0 10px;
+  font-size: 14px;
+  color: #999
+}
+
+::ng-deep .article__slider__item__text {
+  font-size: 16px
+}
+
+::ng-deep .article__slider__menu {
+  position: absolute;
+  right: 0;
+  top: 10px;
+  background: #fff;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+
+::ng-deep .article__slider__menu__arrow {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  cursor: pointer;
+  opacity: .5
+}
+
+::ng-deep .article__slider__menu__prev {
+  width: 100px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/article/images/arrow_left_black.svg) no-repeat center right;
+  background-size: 30px 9px;
+  margin-right: 5px
+}
+
+::ng-deep .article__slider__menu__next {
+  width: 50px;
+  background: url(//s.rbk.ru/v10_rbcnews_static/common/common-10.4.4/styles/pages/article/images/arrow_right_black.svg) no-repeat center left;
+  background-size: 30px 9px;
+  margin-left: 5px
+}
+
+::ng-deep .article__slider__menu__num {
+  display: inline-block;
+  vertical-align: top;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  font-weight: 700
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__slider__menu__arrow:hover {
+    opacity: 1
+  }
+}
+
+::ng-deep .article__container, ::ng-deep .article__special_container, ::ng-deep .article__text container {
+  padding: 24px 30px;
+  margin: 22px 0 28px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  box-shadow: 0 2px 0 0 rgba(0, 0, 0, .2);
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  max-width: 860px
+}
+
+::ng-deep .article__container > p:last-child, ::ng-deep .article__special_container > p:last-child, ::ng-deep .article__text container > p:last-child {
+  margin-bottom: 0 !important
+}
+
+::ng-deep .article__container p, ::ng-deep .article__special_container p, ::ng-deep .article__text container p {
+  font-size: 16px !important;
+  line-height: 24px !important;
+  margin-bottom: 18px !important
+}
+
+::ng-deep .article__container ul, ::ng-deep .article__special_container ul, ::ng-deep .article__text container ul {
+  margin: 0 0 18px 20px !important
+}
+
+::ng-deep .article__container ul li, ::ng-deep .article__special_container ul li, ::ng-deep .article__text container ul li {
+  margin: 0 0 13px 0 !important
+}
+
+::ng-deep .article__container ol, ::ng-deep .article__special_container ol, ::ng-deep .article__text container ol {
+  margin: 0 0 18px 33px !important
+}
+
+::ng-deep .article__container ol li, ::ng-deep .article__special_container ol li, ::ng-deep .article__text container ol li {
+  margin: 0 0 13px 0 !important
+}
+
+::ng-deep .article__container b, ::ng-deep .article__container strong, ::ng-deep .article__special_container b, ::ng-deep .article__special_container strong, ::ng-deep .article__text container b, ::ng-deep .article__text container strong {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif !important;
+  font-weight: 400 !important
+}
+
+::ng-deep .article__container:after, ::ng-deep .article__container:before, ::ng-deep .article__special_container:after, ::ng-deep .article__special_container:before, ::ng-deep .article__text container:after, ::ng-deep .article__text container:before {
+  content: " ";
+  display: table
+}
+
+::ng-deep .article__container:after, ::ng-deep .article__special_container:after, ::ng-deep .article__text container:after {
+  clear: both
+}
+
+::ng-deep .article__container ::ng-deep .article__subheader, ::ng-deep .article__container h2, ::ng-deep .article__container h3, ::ng-deep .article__container h4, ::ng-deep .article__container h5, ::ng-deep .article__container h6, ::ng-deep .article__special_container ::ng-deep .article__subheader, ::ng-deep .article__special_container h2, ::ng-deep .article__special_container h3, ::ng-deep .article__special_container h4, ::ng-deep .article__special_container h5, ::ng-deep .article__special_container h6, ::ng-deep .article__text container ::ng-deep .article__subheader, ::ng-deep .article__text container h2, ::ng-deep .article__text container h3, ::ng-deep .article__text container h4, ::ng-deep .article__text container h5, ::ng-deep .article__text container h6 {
+  margin: 0 0 2px
+}
+
+::ng-deep .article__container ::ng-deep .article__subheader p, ::ng-deep .article__container h2 p, ::ng-deep .article__container h3 p, ::ng-deep .article__container h4 p, ::ng-deep .article__container h5 p, ::ng-deep .article__container h6 p, ::ng-deep .article__special_container ::ng-deep .article__subheader p, ::ng-deep .article__special_container h2 p, ::ng-deep .article__special_container h3 p, ::ng-deep .article__special_container h4 p, ::ng-deep .article__special_container h5 p, ::ng-deep .article__special_container h6 p, ::ng-deep .article__text container ::ng-deep .article__subheader p, ::ng-deep .article__text container h2 p, ::ng-deep .article__text container h3 p, ::ng-deep .article__text container h4 p, ::ng-deep .article__text container h5 p, ::ng-deep .article__text container h6 p {
+  margin: 0 !important;
+  line-height: 20px !important
+}
+
+::ng-deep .article__container ::ng-deep .article__subheader *, ::ng-deep .article__container h2, ::ng-deep .article__container h3, ::ng-deep .article__container h4, ::ng-deep .article__container h5, ::ng-deep .article__container h6, ::ng-deep .article__special_container ::ng-deep .article__subheader *, ::ng-deep .article__special_container h2, ::ng-deep .article__special_container h3, ::ng-deep .article__special_container h4, ::ng-deep .article__special_container h5, ::ng-deep .article__special_container h6, ::ng-deep .article__text container ::ng-deep .article__subheader *, ::ng-deep .article__text container h2, ::ng-deep .article__text container h3, ::ng-deep .article__text container h4, ::ng-deep .article__text container h5, ::ng-deep .article__text container h6 {
+  font: normal 16px/20px GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif !important
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__container a:hover, ::ng-deep .article__special_container a:hover, ::ng-deep .article__text container a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__container, ::ng-deep .article__special_container, ::ng-deep .article__text container {
+    padding: 14px 20px;
+    margin: 18px 0 24px;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    max-width: 640px
+  }
+
+  ::ng-deep .article__container p, ::ng-deep .article__special_container p, ::ng-deep .article__text container p {
+    font-size: 14px !important;
+    line-height: 22px !important;
+    margin-bottom: 9px !important
+  }
+
+  ::ng-deep .article__container ul, ::ng-deep .article__special_container ul, ::ng-deep .article__text container ul {
+    margin: 0 0 9px 20px !important
+  }
+
+  ::ng-deep .article__container ul li, ::ng-deep .article__special_container ul li, ::ng-deep .article__text container ul li {
+    margin: 0 0 9px 0 !important
+  }
+
+  ::ng-deep .article__container ol, ::ng-deep .article__special_container ol, ::ng-deep .article__text container ol {
+    margin: 0 0 9px 33px !important
+  }
+
+  ::ng-deep .article__container ol li, ::ng-deep .article__special_container ol li, ::ng-deep .article__text container ol li {
+    margin: 0 0 9px 0 !important
+  }
+
+  ::ng-deep .article__container ::ng-deep .article__subheader, ::ng-deep .article__container h2, ::ng-deep .article__container h3, ::ng-deep .article__container h4, ::ng-deep .article__container h5, ::ng-deep .article__container h6, ::ng-deep .article__special_container ::ng-deep .article__subheader, ::ng-deep .article__special_container h2, ::ng-deep .article__special_container h3, ::ng-deep .article__special_container h4, ::ng-deep .article__special_container h5, ::ng-deep .article__special_container h6, ::ng-deep .article__text container ::ng-deep .article__subheader, ::ng-deep .article__text container h2, ::ng-deep .article__text container h3, ::ng-deep .article__text container h4, ::ng-deep .article__text container h5, ::ng-deep .article__text container h6 {
+    margin: 0 0 3px
+  }
+
+  ::ng-deep .article__container ::ng-deep .article__subheader p, ::ng-deep .article__container h2 p, ::ng-deep .article__container h3 p, ::ng-deep .article__container h4 p, ::ng-deep .article__container h5 p, ::ng-deep .article__container h6 p, ::ng-deep .article__special_container ::ng-deep .article__subheader p, ::ng-deep .article__special_container h2 p, ::ng-deep .article__special_container h3 p, ::ng-deep .article__special_container h4 p, ::ng-deep .article__special_container h5 p, ::ng-deep .article__special_container h6 p, ::ng-deep .article__text container ::ng-deep .article__subheader p, ::ng-deep .article__text container h2 p, ::ng-deep .article__text container h3 p, ::ng-deep .article__text container h4 p, ::ng-deep .article__text container h5 p, ::ng-deep .article__text container h6 p {
+    line-height: 18px !important
+  }
+
+  ::ng-deep .article__container ::ng-deep .article__subheader *, ::ng-deep .article__container h2, ::ng-deep .article__container h3, ::ng-deep .article__container h4, ::ng-deep .article__container h5, ::ng-deep .article__container h6, ::ng-deep .article__special_container ::ng-deep .article__subheader *, ::ng-deep .article__special_container h2, ::ng-deep .article__special_container h3, ::ng-deep .article__special_container h4, ::ng-deep .article__special_container h5, ::ng-deep .article__special_container h6, ::ng-deep .article__text container ::ng-deep .article__subheader *, ::ng-deep .article__text container h2, ::ng-deep .article__text container h3, ::ng-deep .article__text container h4, ::ng-deep .article__text container h5, ::ng-deep .article__text container h6 {
+    font-size: 14px !important;
+    line-height: 18px !important
+  }
+}
+
+::ng-deep .article__tags__container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 -4px -4px
+}
+
+::ng-deep .article__tags__item {
+  padding: 12px 20px;
+  margin: 0 0 4px 4px;
+  font-size: 14px;
+  line-height: 16px;
+  border-radius: 30px;
+  background: #eee;
+  color: #999
+}
+
+::ng-deep .article__tags__item_more {
+  padding: 9px 16px 17px;
+  cursor: pointer
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__tags__item:hover {
+    opacity: .7
+  }
+}
+
+::ng-deep .article__textextract {
+  margin-top: -1px;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  font-style: italic;
+  color: #333
+}
+
+::ng-deep .article__textextract *, ::ng-deep .article__textextract p {
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 14px
+}
+
+::ng-deep .article__textextract p:last-child {
+  margin-bottom: 15px
+}
+
+::ng-deep .article__textextract b, ::ng-deep .article__textextract strong {
+  font-family: Kazimir-Semibold-Italic, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__textextract {
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 28px
+  }
+
+  ::ng-deep .article__textextract *, ::ng-deep .article__textextract p {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 13px
+  }
+
+  ::ng-deep .article__textextract p:last-child {
+    margin-bottom: 13px
+  }
+}
+
+.gallery_vertical__item {
+  margin-bottom: 24px
+}
+
+.gallery_vertical__title {
+  margin-bottom: 24px;
+  font: bold 24px/26px GraphikCy, 'Helvetica CY', Arial, sans-serif
+}
+
+.gallery_vertical__image {
+  max-width: 100%;
+  display: block
+}
+
+.gallery_vertical__meta {
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  font-size: 14px !important;
+  line-height: 18px !important;
+  color: #999;
+  margin-top: 13px
+}
+
+.gallery_vertical__meta p {
+  font-size: 14px !important;
+  line-height: 18px !important;
+  margin-bottom: 8px
+}
+
+.gallery_vertical__meta ul {
+  margin: 0 0 8px 20px
+}
+
+.gallery_vertical__meta ul li {
+  margin: 0 0 3px 0;
+  list-style: disc
+}
+
+.gallery_vertical__meta ol {
+  margin: 0 0 8px 33px
+}
+
+.gallery_vertical__meta ol li {
+  margin: 0 0 3px 0;
+  list-style: decimal
+}
+
+.gallery_vertical__meta b, .gallery_vertical__meta strong {
+  font-weight: 700
+}
+
+.gallery_vertical__meta em, .gallery_vertical__meta i {
+  font-style: italic
+}
+
+.gallery_vertical__meta a {
+  background: linear-gradient(to bottom, #222 50%, #222 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px
+}
+
+.gallery_vertical__description {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  margin-top: 20px
+}
+
+.gallery_vertical__description p {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 17px
+}
+
+.gallery_vertical__description b, .gallery_vertical__description strong {
+  font-family: Kazimir-Semibold, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+.gallery_vertical__description em, .gallery_vertical__description i {
+  font-style: italic
+}
+
+.gallery_vertical__description em b, .gallery_vertical__description em strong, .gallery_vertical__description i b, .gallery_vertical__description i strong {
+  font-family: Kazimir-Semibold-Italic, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+.gallery_vertical__description ul {
+  margin: 0 0 17px 20px
+}
+
+.gallery_vertical__description ul li {
+  margin: 0 0 12px 0;
+  list-style: disc
+}
+
+.gallery_vertical__description ol {
+  margin: 0 0 17px 33px
+}
+
+.gallery_vertical__description ol li {
+  margin: 0 0 12px 0;
+  list-style: decimal
+}
+
+.gallery_vertical__description h2, .gallery_vertical__description h3, .gallery_vertical__description h4, .gallery_vertical__description h5, .gallery_vertical__description h6 {
+  margin: 18px 0 21px;
+  font: bold 24px/26px GraphikCy, 'Helvetica CY', Arial, sans-serif
+}
+
+.gallery_vertical__description a {
+  background: linear-gradient(to bottom, #222 50%, #222 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px
+}
+
+.gallery_vertical__description ::ng-deep .article__textextract, .gallery_vertical__description blockquote {
+  margin-top: -1px;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  font-style: italic;
+  color: #333
+}
+
+.gallery_vertical__description ::ng-deep .article__textextract *, .gallery_vertical__description ::ng-deep .article__textextract p, .gallery_vertical__description blockquote *, .gallery_vertical__description blockquote p {
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 14px
+}
+
+.gallery_vertical__description ::ng-deep .article__textextract p:last-child, .gallery_vertical__description blockquote p:last-child {
+  margin-bottom: 15px
+}
+
+.gallery_vertical__description ::ng-deep .article__textextract b, .gallery_vertical__description ::ng-deep .article__textextract strong, .gallery_vertical__description blockquote b, .gallery_vertical__description blockquote strong {
+  font-family: Kazimir-Semibold-Italic, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .gallery_vertical__meta a:hover {
+    opacity: .7
+  }
+
+  .gallery_vertical__description a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 980px) {
+  .gallery_vertical__title {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: .3px
+  }
+}
+
+::ng-deep .article__content {
+  position: relative;
+  padding: 0 25px 49px
+}
+
+::ng-deep .article__content:after, ::ng-deep .article__content:before {
+  content: " ";
+  display: table
+}
+
+::ng-deep .article__content:after {
+  clear: both
+}
+
+::ng-deep .article__padding-off {
+  margin-top: -49px
+}
+
+::ng-deep .article__subheader {
+  margin: 18px 0 21px;
+  font: bold 24px/26px GraphikCy, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__subheader * {
+  font: bold 24px/26px GraphikCy, 'Helvetica CY', Arial, sans-serif !important
+}
+
+::ng-deep .article__text {
+  font-size: 18px;
+  line-height: 26px;
+  padding: 0 25px;
+  margin: 0 -25px;
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  overflow: hidden
+}
+
+::ng-deep .article__text p {
+  font-size: 18px;
+  line-height: 26px;
+  margin-bottom: 17px
+}
+
+::ng-deep .article__text b, ::ng-deep .article__text strong {
+  font-family: Kazimir-Semibold, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+::ng-deep .article__text em, ::ng-deep .article__text i {
+  font-style: italic
+}
+
+::ng-deep .article__text em b, ::ng-deep .article__text em strong, ::ng-deep .article__text i b, ::ng-deep .article__text i strong {
+  font-family: Kazimir-Semibold-Italic, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+::ng-deep .article__text ul {
+  margin: 0 0 17px 20px
+}
+
+::ng-deep .article__text ul li {
+  margin: 0 0 12px 0;
+  list-style: disc
+}
+
+::ng-deep .article__text ol {
+  margin: 0 0 17px 33px
+}
+
+::ng-deep .article__text ol li {
+  margin: 0 0 12px 0;
+  list-style: decimal
+}
+
+::ng-deep .article__text h2, ::ng-deep .article__text h3, ::ng-deep .article__text h4, ::ng-deep .article__text h5, ::ng-deep .article__text h6 {
+  margin: 18px 0 21px;
+  font: bold 24px/26px GraphikCy, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__text a {
+  background: linear-gradient(to bottom, #222 50%, #222 50%);
+  background-repeat: repeat-x;
+  background-position: 0 100%;
+  background-size: 1px 1px
+}
+
+::ng-deep .article__text ::ng-deep .article__textextract, ::ng-deep .article__text blockquote {
+  margin-top: -1px;
+  font-size: 28px;
+  line-height: 36px;
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  font-style: italic;
+  color: #333
+}
+
+::ng-deep .article__text ::ng-deep .article__textextract *, ::ng-deep .article__text ::ng-deep .article__textextract p, ::ng-deep .article__text blockquote *, ::ng-deep .article__text blockquote p {
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif;
+  font-style: italic;
+  font-size: 28px;
+  line-height: 36px;
+  margin-bottom: 14px
+}
+
+::ng-deep .article__text ::ng-deep .article__textextract p:last-child, ::ng-deep .article__text blockquote p:last-child {
+  margin-bottom: 15px
+}
+
+::ng-deep .article__text ::ng-deep .article__textextract b, ::ng-deep .article__text ::ng-deep .article__textextract strong, ::ng-deep .article__text blockquote b, ::ng-deep .article__text blockquote strong {
+  font-family: Kazimir-Semibold-Italic, 'Helvetica CY', Arial, sans-serif;
+  font-weight: 400
+}
+
+::ng-deep .article__text__overview {
+  margin-bottom: 17px;
+  font: normal 22px/28px Kazimir-Medium, 'Helvetica CY', Arial, sans-serif;
+  overflow: hidden
+}
+
+::ng-deep .article__text__overview p, ::ng-deep .article__text__overview span {
+  font: normal 22px/28px Kazimir-Medium, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__text__overview__no-bold {
+  font-family: Kazimir, 'Helvetica CY', Arial, sans-serif
+}
+
+::ng-deep .article__text .twitter-video {
+  max-width: 500px !important
+}
+
+::ng-deep .article__text img {
+  max-width: 100%
+}
+
+::ng-deep .article__text a[anchor] {
+  display: inline-block
+}
+
+::ng-deep .article__text_free a[name] {
+  padding-top: 355px;
+  margin-top: -355px
+}
+
+::ng-deep .article__clear {
+  display: block;
+  clear: both
+}
+
+::ng-deep .article__instagram {
+  overflow: hidden
+}
+
+::ng-deep .article__instagram .instagram-media {
+  width: 1px !important;
+  min-width: 99% !important
+}
+
+::ng-deep .article__fb-post {
+  overflow: hidden
+}
+
+::ng-deep .article__fb-link {
+  display: none
+}
+
+::ng-deep .article__fb-post_force {
+  display: none
+}
+
+::ng-deep .article__fb-link_force {
+  display: inline
+}
+
+::ng-deep .article twitterwidget {
+  margin-bottom: 24px !important
+}
+
+::ng-deep .article__scroll {
+  overflow-x: auto
+}
+
+a::ng-deep .article__anchor {
+  background: 0 0
+}
+
+::ng-deep .article__black-bg > span {
+  display: inline;
+  background: #000 !important;
+  color: #000 !important
+}
+
+::ng-deep .article__black-bg > span:hover {
+  color: #000 !important
+}
+
+@media (hover: hover) and (pointer: fine) {
+  ::ng-deep .article__text a:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 980px) {
+  ::ng-deep .article {
+    overflow: hidden
+  }
+
+  ::ng-deep .article__text_free a[name] {
+    padding-top: 105px;
+    margin-top: -105px
+  }
+}
+
+@media (max-width: 640px) {
+  ::ng-deep .article__content {
+    padding: 0 20px 39px
+  }
+
+  ::ng-deep .article__padding-off {
+    margin-top: -39px
+  }
+
+  ::ng-deep .article__subheader {
+    margin: 15px 0 17px;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: .3px
+  }
+
+  ::ng-deep .article__subheader * {
+    font-size: 22px !important;
+    line-height: 24px !important
+  }
+
+  ::ng-deep .article__text {
+    font-size: 17px;
+    line-height: 24px;
+    padding: 0 20px;
+    margin: 0 -20px
+  }
+
+  ::ng-deep .article__text p {
+    font-size: 17px;
+    line-height: 24px;
+    margin-bottom: 14px
+  }
+
+  ::ng-deep .article__text ul {
+    margin: 0 0 14px 20px
+  }
+
+  ::ng-deep .article__text ol {
+    margin: 0 0 14px 33px
+  }
+
+  ::ng-deep .article__text h2, ::ng-deep .article__text h3, ::ng-deep .article__text h4, ::ng-deep .article__text h5, ::ng-deep .article__text h6 {
+    margin: 15px 0 17px;
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: .3px
+  }
+
+  ::ng-deep .article__text ::ng-deep .article__textextract, ::ng-deep .article__text blockquote {
+    margin-top: 0;
+    font-size: 22px;
+    line-height: 28px
+  }
+
+  ::ng-deep .article__text ::ng-deep .article__textextract *, ::ng-deep .article__text ::ng-deep .article__textextract p, ::ng-deep .article__text blockquote *, ::ng-deep .article__text blockquote p {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 13px
+  }
+
+  ::ng-deep .article__text ::ng-deep .article__textextract p:last-child, ::ng-deep .article__text blockquote p:last-child {
+    margin-bottom: 13px
+  }
+
+  ::ng-deep .article__text__overview {
+    margin-bottom: 15px;
+    font-size: 20px;
+    line-height: 24px
+  }
+
+  ::ng-deep .article__text__overview p, ::ng-deep .article__text__overview span {
+    font-size: 20px;
+    line-height: 24px
+  }
+
+  ::ng-deep .article__fb-link_force {
+    display: none
+  }
+
+  ::ng-deep .article__fb-post_force {
+    display: block
+  }
+}
+
+@media (max-width: 399px) {
+  ::ng-deep .article__fb-post {
+    display: none
+  }
+
+  ::ng-deep .article__fb-link {
+    display: inline
+  }
+}
+
+.interview__question {
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif
+}
+
+.intresting {
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  overflow: hidden
+}
+
+.intresting__header {
+  padding: 31px 20px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px
+}
+
+.intresting__item {
+  position: relative;
+  padding: 17px 0 15px;
+  margin: 0 20px;
+  border-top: 1px solid #ddd
+}
+
+.intresting__item:first-child {
+  border-top: none;
+  padding-top: 13px
+}
+
+.intresting__item_big .intresting__title {
+  font-size: 20px;
+  line-height: 22px
+}
+
+.intresting__link {
+  display: block
+}
+
+.intresting__title {
+  display: block;
+  font-size: 14px;
+  line-height: 18px
+}
+
+.intresting__bottom {
+  margin-top: 3px
+}
+
+.intresting__category {
+  font-size: 14px;
+  line-height: 18px;
+  color: #999;
+  white-space: normal
+}
+
+.intresting__lasso-wrap {
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: -5px;
+  bottom: 5px;
+  right: 0;
+  left: -19px;
+  pointer-events: none;
+  z-index: 1
+}
+
+.intresting__lasso {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .intresting__link:hover .intresting__title {
+    opacity: .7
+  }
+}
+
+.rbcslider__slide {
+  position: relative
+}
+
+.rbcslider__multy-news {
+  background: #fff;
+  position: relative;
+  z-index: 19;
+  margin-left: 1px
+}
+
+.readmore {
+  position: relative;
+  padding: 28px 0 28px 25px;
+  margin-top: -1px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  background: #fff;
+  z-index: 18
+}
+
+.readmore__header {
+  margin-bottom: 17px;
+  font: normal 24px/24px GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  letter-spacing: -.5px
+}
+
+.readmore__inner {
+  display: table;
+  table-layout: fixed;
+  min-height: 1px;
+  width: 100%;
+  height: 100%
+}
+
+.readmore__row {
+  display: table-row
+}
+
+.readmore__item {
+  position: relative;
+  display: table-cell;
+  vertical-align: top;
+  height: 100%;
+  width: 25%
+}
+
+.readmore__link {
+  display: block;
+  margin-right: 25px;
+  overflow: hidden
+}
+
+.readmore__image-block {
+  display: block;
+  margin-bottom: 11px;
+  overflow: hidden
+}
+
+.readmore__image {
+  display: block;
+  max-width: 100%
+}
+
+.readmore__title {
+  display: block;
+  margin-bottom: 27px;
+  font-size: 16px;
+  line-height: 20px
+}
+
+.readmore__bottom {
+  position: absolute;
+  right: 25px;
+  bottom: 0;
+  left: 0;
+  font-size: 0;
+  white-space: nowrap
+}
+
+.readmore__category {
+  display: inline-block;
+  vertical-align: top;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 99%;
+  font-size: 12px;
+  line-height: 14px;
+  color: #999
+}
+
+.readmore__category_icon {
+  max-width: 90%
+}
+
+.readmore_pro {
+  background: #fcfcfc
+}
+
+.readmore_pro .readmore__title {
+  font-family: GraphikCy-Medium, 'Helvetica CY', Arial, sans-serif
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .readmore__link:hover .readmore__title {
+    opacity: .7
+  }
+
+  .readmore__category:hover {
+    opacity: .7
+  }
+}
+
+@media (max-width: 1260px) {
+  .readmore__item_hidden {
+    display: none
+  }
+}
+
+@media (max-width: 980px) {
+  .readmore {
+    padding-bottom: 29px
+  }
+
+  .readmore__inner {
+    display: block;
+    width: auto;
+    height: 247px;
+    margin-left: -25px;
+    overflow: hidden
+  }
+
+  .readmore__row {
+    position: relative;
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+    padding: 0 0 30px 25px;
+    font-size: 0;
+    white-space: nowrap
+  }
+
+  .readmore__item {
+    display: inline-block;
+    vertical-align: top;
+    width: 232px;
+    white-space: normal
+  }
+
+  .readmore__item_hidden {
+    display: inline-block
+  }
+
+  .readmore__title {
+    height: 80px;
+    overflow: hidden
+  }
+}
+
+@media (max-width: 640px) {
+  .readmore {
+    padding: 24px 0 24px 20px
+  }
+
+  .readmore__header {
+    font-size: 22px;
+    line-height: 22px
+  }
+
+  .readmore__inner {
+    margin-left: -20px
+  }
+
+  .readmore__row {
+    padding-left: 20px
+  }
+}
+
+.r-container, .r-iframe {
+  margin: 0;
+  position: relative
+}
+
+.smi2 {
+  border-top: 1px solid rgba(0, 0, 0, .08);
+  background: #fff;
+  z-index: 2;
+  position: relative;
+  padding: 30px 0 30px 30px
+}
+
+.smi2__head {
+  text-transform: uppercase;
+  font-family: GraphikCy, 'Helvetica CY', Arial, sans-serif;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: .7px
+}
+
+.smi2__row {
+  display: table;
+  height: 100%;
+  width: 100%;
+  table-layout: fixed
+}
+
+.smi2__item {
+  display: table-cell;
+  vertical-align: top;
+  width: 25%
+}
+
+.smi2__link {
+  margin-right: 30px;
+  display: block;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  background-color: #222
+}
+
+.smi2__image-block {
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  padding-top: 52.63%;
+  position: relative;
+  margin-bottom: 0
+}
+
+.smi2__image {
+  display: inline-block;
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+.smi2__title {
+  display: block;
+  padding-bottom: 25px;
+  font-size: 16px;
+  line-height: 20px;
+  font-family: GraphikCy-Semibold, 'Helvetica CY', Arial, sans-serif;
+  color: #fff;
+  padding: 7px 16px 16px
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .smi2__link:hover .smi2__title {
+    color: #1b8
+  }
+}
+
+.theme-materials {
+  background: #fff;
+  overflow: hidden
+}
+
+.theme-materials:after {
+  content: '';
+  display: block;
+  background: #ddd;
+  height: 1px
+}
+
+.theme-materials__header {
+  padding: 31px 20px 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px
+}
+
+.theme-materials__item {
+  position: relative;
+  padding: 17px 0 15px;
+  margin: 0 20px;
+  border-top: 1px solid #ddd
+}
+
+.theme-materials__item:first-child {
+  border-top: none;
+  padding-top: 13px
+}
+
+.theme-materials__item_big .theme-materials__title {
+  font-size: 20px;
+  line-height: 22px
+}
+
+.theme-materials__link {
+  display: block
+}
+
+.theme-materials__title {
+  display: block;
+  font-size: 14px;
+  line-height: 18px
+}
+
+.theme-materials__bottom {
+  margin-top: 5px
+}
+
+.theme-materials__category {
+  font-size: 12px;
+  line-height: 14px;
+  color: #999;
+  white-space: normal
+}
+
+.theme-materials__image {
+  max-width: 13px;
+  position: relative;
+  bottom: -2px;
+  margin-left: 2px
+}
+
+.theme-materials__lasso-wrap {
+  display: block;
+  position: absolute;
+  top: -14px;
+  right: -7px;
+  bottom: 2px;
+  left: -7px;
+  pointer-events: none
+}
+
+.theme-materials__lasso {
+  display: block;
+  max-width: 100%;
+  height: 100%
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .theme-materials__link:hover .theme-materials__title {
+    opacity: .7
+  }
+}
+
+.twitter-tweet-error {
+  display: none
+}

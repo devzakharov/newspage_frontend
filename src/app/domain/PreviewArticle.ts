@@ -8,6 +8,7 @@ export class PreviewArticle {
   anons: string;
   category: string;
   publishDate: string;
+  articleHtml: string;
 
   constructor(
     id: string,
@@ -28,5 +29,9 @@ export class PreviewArticle {
     this.category = category;
     this.publishDate = publishDate;
 
+  }
+
+  setFullText(text): void {
+    this.articleHtml = text;
   }
 }

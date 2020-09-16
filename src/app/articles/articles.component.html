@@ -36,7 +36,7 @@
                 <h2 class="card-title">{{item.title}}</h2>
                 <sup class="card-subtitle mb-2 text-muted">{{item.publishDate}}</sup>
                 <p class="card-text">{{item.description}}</p>
-                <button mat-raised-button appTippy title="{{item.anons}}" data-article-id="{{item.id}}" (click)="openArticle(item.id)">Читать полностью</button>
+                <button mat-raised-button appTippy title="{{item.anons}}" data-article-id="{{item.id}}" (click)="openFullArticle(item.id)">Читать полностью</button>
               </div>
             </div>
           </div>

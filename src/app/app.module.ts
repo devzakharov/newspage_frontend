@@ -22,6 +22,8 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS, MatFormFieldModule} from '@angular/material/form-field';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
+import { FullArticleComponent } from './article-full/full-article.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 const appRoutes: Routes = [
@@ -39,7 +41,8 @@ const appRoutes: Routes = [
     LoginComponent,
     ArticlesComponent,
     TagsCloudComponent,
-    DatepickerComponent
+    DatepickerComponent,
+    FullArticleComponent
   ],
   imports: [
     BrowserModule,
@@ -60,6 +63,7 @@ const appRoutes: Routes = [
     MatButtonModule,
     MatFormFieldModule,
     MatNativeDateModule,
+    MatDialogModule,
   ],
   providers: [
     RegisterService,
