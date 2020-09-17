@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {SharedService} from '../services/shared.service';
+import {EventEmitterService} from '../services/event.emitter.service';
+import * as moment from 'moment';
 
 @Component({
   selector: 'app-datepicker',
@@ -14,10 +17,24 @@ export class DatepickerComponent implements OnInit {
     end: new FormControl()
   });
 
-  constructor() { }
+  constructor(
+    private sharedService: SharedService,
+    private eventEmitterService: EventEmitterService
+  ) {
+  }
 
   ngOnInit(): void {
+    this.sharedService.currentDateFrom.subscribe(val => {
+        this.range.value.start = val;
+    });
+    this.sharedService.currentDateTo.subscribe(val => {
+        this.range.value.end = val;
+    });
+  }
 
+  rangeChange(): void {
+    this.sharedService.setFromToValues(this.range.value.start, this.range.value.end);
+    this.eventEmitterService.onTagFilterChange();
   }
 
 }

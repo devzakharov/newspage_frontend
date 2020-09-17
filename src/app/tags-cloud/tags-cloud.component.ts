@@ -42,16 +42,12 @@ export class TagsCloudComponent implements OnInit {
 
     this.http.post('http://localhost:5656/tags?getalltags=1', {}).subscribe(data => {
 
-      console.log('Response: ', data);
+      // console.log('Response: ', data);
 
       this.tagCloudObject = data;
 
-      // TODO передать ответственность за отсеевание тегов на бекенд
       for (const [key, value] of Object.entries(data)) {
-        // if (value > 8) {
-          // this.temporaryCloudData.push({text: key, weight: value, link: '/filter?tag=' + key});
           this.temporaryCloudData.push({text: key, weight: value, selected: false});
-        // }
       }
 
       this.cloudData = this.temporaryCloudData;
@@ -75,7 +71,7 @@ export class TagsCloudComponent implements OnInit {
   addToFilterQueryArray(tag): void {
     console.log('added: ' + tag.text);
     this.selectedTagsArray.push(tag.text);
-    this.sharedService.changeArray(this.selectedTagsArray);
+    this.sharedService.changeTagsArray(this.selectedTagsArray);
     this.eventEmitterService.onTagFilterChange();
   }
 
@@ -85,7 +81,7 @@ export class TagsCloudComponent implements OnInit {
     if (index > -1) {
       this.selectedTagsArray.splice(index, 1);
     }
-    this.sharedService.changeArray(this.selectedTagsArray);
+    this.sharedService.changeTagsArray(this.selectedTagsArray);
     this.eventEmitterService.onTagFilterChange();
   }
 

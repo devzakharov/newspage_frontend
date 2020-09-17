@@ -14,4 +14,8 @@ export class EventEmitterService {
   onTagFilterChange(): void {
     this.invokeSendRequestFunction.emit();
   }
+
+  // onDateFilterChange(): void {
+  //   this.invokeSendRequestFunction.emit();
+  // }
 }

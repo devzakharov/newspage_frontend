@@ -32,8 +32,27 @@ export class ArticlesComponent implements OnInit{
   }
 
   ngOnInit(): void {
+
     this.sendRequest();
+
     this.sharedService.currentArray.subscribe(arr => this.filterOptions.tags = arr);
+
+    this.sharedService.currentDateFrom.subscribe(val => {
+      if (val != null) {
+        this.filterOptions.fromDate = moment(val.toString()).format('YYYY-MM-DD');
+        // console.log(this.filterOptions.fromDate);
+        this.articles = [];
+      }
+    });
+
+    this.sharedService.currentDateTo.subscribe(val => {
+      if (val != null) {
+        this.filterOptions.toDate = moment(val.toString()).format('YYYY-MM-DD');
+        // console.log(this.filterOptions.toDate);
+        this.articles = [];
+      }
+    });
+
     if (this.eventEmitterService.subsVar === undefined) {
       this.eventEmitterService.subsVar = this.eventEmitterService.invokeSendRequestFunction.subscribe(() => {
         this.articles = [];
@@ -54,7 +73,7 @@ export class ArticlesComponent implements OnInit{
       'http://localhost:5656/articles' + this.filterOptions.getParametersString(),
       {}).subscribe(data => {
         console.log('URL: http://localhost:5656/articles' + this.filterOptions.getParametersString());
-        console.log('Data: ', data);
+        // console.log('Data: ', data);
         if (data !== null) {
           data.forEach(article => {
             this.addNewsItem(
@@ -70,11 +89,12 @@ export class ArticlesComponent implements OnInit{
             );
           });
         }
-        this.filterOptions.updateOffset();
+        // console.log(this.filterOptions);
     });
   }
 
   onScroll(): void {
+    this.filterOptions.updateOffset();
     this.sendRequest();
   }
 
