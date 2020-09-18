@@ -9,7 +9,7 @@ import {RegisterService} from '../register.service';
 import {RouterModule, Routes} from '@angular/router';
 import {LoginComponent} from './login/login.component';
 import {ArticlesComponent} from './articles/articles.component';
-import { AlertModule } from './_alert';
+import { AlertModule } from './alert';
 import { TagsCloudComponent } from './tags-cloud/tags-cloud.component';
 import { TagCloudModule } from 'angular-tag-cloud-module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +24,11 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import { FullArticleComponent } from './article-full/full-article.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ScrollTopComponent } from './scroll-top/scroll-top.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { TopSearchComponent } from './top-search/top-search.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 
 
 const appRoutes: Routes = [
@@ -42,7 +47,9 @@ const appRoutes: Routes = [
     ArticlesComponent,
     TagsCloudComponent,
     DatepickerComponent,
-    FullArticleComponent
+    FullArticleComponent,
+    ScrollTopComponent,
+    TopSearchComponent
   ],
   imports: [
     BrowserModule,
@@ -64,6 +71,9 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatNativeDateModule,
     MatDialogModule,
+    FontAwesomeModule,
+    MatInputModule,
+    MatAutocompleteModule,
   ],
   providers: [
     RegisterService,

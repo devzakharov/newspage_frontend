@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {AlertService} from '../_alert';
+import {AlertService} from '../alert';
 import {TagsCloud} from '../domain/TagsCloud';
 import {SharedService} from '../services/shared.service';
 import {EventEmitterService} from '../services/event.emitter.service';

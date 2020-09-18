@@ -2,10 +2,21 @@
 :host {
 
 }
+h1 {
+  margin-bottom: 0;
+  line-height: 52px;
+}
 
 .header {
-  /*height: 70px;*/
-  border-bottom: 1px solid black;
+  height: 75px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  padding-top: 8px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  background: #fbfbfb;
 }
 .form-section {
   padding: 15px 0;

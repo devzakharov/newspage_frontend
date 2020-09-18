@@ -1,0 +1,11 @@
+<form class="" (ngSubmit)="onSubmit($event)">
+<mat-form-field appearance="fill">
+  <mat-label>Поиск</mat-label>
+  <input (keyup)="onKeyPress($event)" matInput [formControl]="myControl" [matAutocomplete]="auto">
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let variant of filteredVariants | async" [value]="variant">
+      {{variant}}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+</form>

@@ -1,5 +1,5 @@
 :host {
-
+/*padding-top: 75px;*/
 }
 
 alert {
@@ -8,4 +8,7 @@ alert {
   width: calc(100%);
   padding: 0 15px;
   z-index: 9999;
+}
+.news_app_body {
+  padding-top: 75px;
 }

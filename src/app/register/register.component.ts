@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
 import {RegisterService} from '../../register.service';
 import {HttpClient, HttpErrorResponse} from '@angular/common/http';
-import { AlertService } from '../_alert';
+import { AlertService } from '../alert';
 import {Observable, throwError} from 'rxjs';
 import {catchError} from 'rxjs/operators';
 
