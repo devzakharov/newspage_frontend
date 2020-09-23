@@ -45,6 +45,11 @@ export class ArticlesComponent implements OnInit{
       }
     });
 
+    this.sharedService.currentArticlesArray.subscribe( arr => {
+      this.articles = [];
+      this.articles = arr;
+    });
+
     this.sharedService.currentDateTo.subscribe(val => {
       if (val != null) {
         this.filterOptions.toDate = moment(val.toString()).format('YYYY-MM-DD');

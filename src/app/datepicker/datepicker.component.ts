@@ -33,7 +33,7 @@ export class DatepickerComponent implements OnInit {
   }
 
   rangeChange(): void {
-    this.sharedService.setFromToValues(this.range.value.start, this.range.value.end);
+    this.sharedService.setFilterValues(this.range.value.start, this.range.value.end);
     this.eventEmitterService.onTagFilterChange();
   }
 

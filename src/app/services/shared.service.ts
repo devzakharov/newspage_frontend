@@ -10,7 +10,8 @@ export class SharedService {
   private dateTo = new BehaviorSubject([]);
   currentDateFrom = this.dateFrom.asObservable();
   currentDateTo = this.dateTo.asObservable();
-
+  private articlesArray = new BehaviorSubject([]);
+  currentArticlesArray = this.articlesArray.asObservable();
 
   constructor() {}
 
@@ -18,8 +19,12 @@ export class SharedService {
     this.tagsArray.next(value);
   }
 
-  setFromToValues(from: any, to: any): void {
+  setFilterValues(from: any, to: any): void {
     this.dateFrom.next(from);
     this.dateTo.next(to);
   }
+
+  changeArticlesArray(articlesArray: any): void {
+    this.articlesArray.next(articlesArray);
+   }
 }
