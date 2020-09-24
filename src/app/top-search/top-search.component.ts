@@ -26,16 +26,14 @@ export class TopSearchComponent implements OnInit {
   onKeyPress(event): void {
     if (event.key === 'Enter') {
       this.requestArticles();
-      // console.log(event.key);
-    }
-    // if (event.key === ' ') {
-    //   console.log(event.key);
-    // }
-    if ((event.target.value.length > 3) && (event.target.value.length < 15)){
+      // this.onSubmit(event);
+      // console.log(event.target);
+      return;
+    } else if ((event.target.value.length > 3) && (event.target.value.length < 15)){
       this.inputValue = event.target.value;
       this.requestWordsList();
     } else {
-      this.inputValue = '';
+      return;
     }
   }
 
@@ -56,7 +54,7 @@ export class TopSearchComponent implements OnInit {
 
   onSubmit(event): void {
     event.preventDefault();
-    // console.log('Вэлью: ' + this.inputValue);
+    console.log('Вэлью: ' + this.inputValue);
     this.requestArticles();
   }
 
@@ -65,10 +63,10 @@ export class TopSearchComponent implements OnInit {
       console.log(data);
       this.variants = [];
       // if (data !== null) {
-        data.forEach(word => {
+      data.forEach(word => {
           this.variants.push(word);
-        });
-        this.ngOnInit();
+      });
+      this.ngOnInit();
       // }
     });
 
@@ -77,10 +75,10 @@ export class TopSearchComponent implements OnInit {
 
   requestArticles(): void {
     console.log('Articles requested ' + this.inputValue);
+    this.articlesArray = [];
     this.http.post<any>('http://localhost:5656/articles?search=' + this.inputValue, {}).subscribe(data => {
       // console.log(data);
       if (data !== null) {
-        this.articlesArray = [];
         data.forEach(article => {
           this.addArticleItem(
             article.id,
