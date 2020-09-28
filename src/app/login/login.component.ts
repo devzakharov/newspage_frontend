@@ -29,7 +29,6 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit(userData): void {
-    // this.loginForm.reset();
     this.sendRequest(userData);
     console.warn('Your data: ', userData);
   }

@@ -10,6 +10,7 @@ import {PreviewArticle} from '../domain/PreviewArticle';
   templateUrl: './full-article.component.html',
   styleUrls: ['./full-article.component.css']
 })
+
 export class FullArticleComponent implements OnInit {
 
   article: PreviewArticle = new PreviewArticle('', '', '', '', '', '', '', '');

@@ -26,8 +26,6 @@ export class TopSearchComponent implements OnInit {
   onKeyPress(event): void {
     if (event.key === 'Enter') {
       this.requestArticles();
-      // this.onSubmit(event);
-      // console.log(event.target);
       return;
     } else if ((event.target.value.length > 3) && (event.target.value.length < 15)){
       this.inputValue = event.target.value;
@@ -88,7 +86,6 @@ export class TopSearchComponent implements OnInit {
             article.photo,
             this.b64DecodeUnicode(article.anons),
             article.category,
-            // moment(article.publishDate).format('DD.MM.YYYY hh:mm')
             moment(article.publishDate).format('LLLL')
           );
         });
@@ -97,7 +94,6 @@ export class TopSearchComponent implements OnInit {
     console.log('Articles array: ', this.articlesArray);
     this.sharedService.changeArticlesArray(this.articlesArray);
   }
-
 
   addArticleItem(
     // tslint:disable-next-line:max-line-length

@@ -1,7 +1,6 @@
 import {Component, OnInit, TemplateRef} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import * as moment from 'moment';
-import { MatSliderModule } from '@angular/material/slider';
 import { FilterOptions } from '../domain/FilterOptions';
 import { PreviewArticle } from '../domain/PreviewArticle';
 import {SharedService} from '../services/shared.service';
@@ -40,7 +39,6 @@ export class ArticlesComponent implements OnInit{
     this.sharedService.currentDateFrom.subscribe(val => {
       if (val != null) {
         this.filterOptions.fromDate = moment(val.toString()).format('YYYY-MM-DD');
-        // console.log(this.filterOptions.fromDate);
         this.articles = [];
       }
     });
@@ -89,12 +87,10 @@ export class ArticlesComponent implements OnInit{
               article.photo,
               this.b64DecodeUnicode(article.anons),
               article.category,
-              // moment(article.publishDate).format('DD.MM.YYYY hh:mm')
               moment(article.publishDate).format('LLLL')
             );
           });
         }
-        // console.log(this.filterOptions);
     });
   }
 
