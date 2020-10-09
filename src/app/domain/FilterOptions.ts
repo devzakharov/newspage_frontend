@@ -6,6 +6,7 @@ export class FilterOptions {
   tags: Array<string>;
   offset: number;
   limit: number;
+  searchQuery: string;
 
   constructor() {
     // this.fromDate = moment().subtract(1, 'months').format('YYYY-MM-DD');
@@ -13,6 +14,7 @@ export class FilterOptions {
     this.tags = [];
     this.offset = 0;
     this.limit = 10;
+    this.searchQuery = 'undefined';
   }
 
   updateOffset(): void {
@@ -27,6 +29,7 @@ export class FilterOptions {
     query += '&toDate=';
     this.toDate === 'Invalid date' ? query += 'undefined' : query += moment(this.toDate).add(1, 'day').format('YYYY-MM-DD');
     query += '&tags=' + this.tags.toString();
+    query += '&search=' + this.searchQuery;
     return query;
   }
 }

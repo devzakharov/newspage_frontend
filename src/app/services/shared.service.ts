@@ -12,6 +12,8 @@ export class SharedService {
   currentDateTo = this.dateTo.asObservable();
   private articlesArray = new BehaviorSubject([]);
   currentArticlesArray = this.articlesArray.asObservable();
+  private searchQuery = new BehaviorSubject('');
+  currentSearchQuery = this.searchQuery.asObservable();
 
   constructor() {}
 
@@ -26,5 +28,9 @@ export class SharedService {
 
   changeArticlesArray(articlesArray: any): void {
     this.articlesArray.next(articlesArray);
-   }
+  }
+
+  updateSearchField(searchQuery: string): void {
+    this.searchQuery.next(searchQuery);
+  }
 }

@@ -56,6 +56,13 @@ export class ArticlesComponent implements OnInit{
       }
     });
 
+    this.sharedService.currentSearchQuery.subscribe(value => {
+      if (value !== '') {
+        this.filterOptions.searchQuery = value;
+        console.log('articles.component получает значение ' + value);
+      }
+    });
+
     if (this.eventEmitterService.subsVar === undefined) {
       this.eventEmitterService.subsVar = this.eventEmitterService.invokeSendRequestFunction.subscribe(() => {
         this.articles = [];

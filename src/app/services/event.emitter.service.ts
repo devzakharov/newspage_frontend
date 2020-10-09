@@ -15,6 +15,9 @@ export class EventEmitterService {
     this.invokeSendRequestFunction.emit();
   }
 
+  onSearchFieldChange(): void {
+    this.invokeSendRequestFunction.emit();
+  }
   // onDateFilterChange(): void {
   //   this.invokeSendRequestFunction.emit();
   // }
