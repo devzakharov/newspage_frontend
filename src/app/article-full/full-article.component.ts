@@ -29,8 +29,8 @@ export class FullArticleComponent implements OnInit {
   }
 
   sendRequest(): void {
-    this.http.post<any>(
-      'http://localhost:5656/article?id=' + this.id, {}).subscribe(data => {
+    this.http.get<any>(
+      'http://localhost:5656/api/v1/article?id=' + this.id, {}).subscribe(data => {
       if (data !== null) {
         console.log(data);
 

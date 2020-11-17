@@ -79,10 +79,10 @@ export class ArticlesComponent implements OnInit{
   }
 
   sendRequest(): void {
-    this.http.post<any>(
-      'http://localhost:5656/articles' + this.filterOptions.getParametersString(),
+    this.http.get<any>(
+      'http://localhost:5656/api/v1/articles' + this.filterOptions.getParametersString(),
       {}).subscribe(data => {
-        console.log('URL: http://localhost:5656/articles' + this.filterOptions.getParametersString());
+        console.log('URL: http://localhost:5656/api/v1/articles' + this.filterOptions.getParametersString());
         // console.log('Data: ', data);
         if (data !== null) {
           data.forEach(article => {

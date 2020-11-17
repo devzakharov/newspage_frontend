@@ -57,7 +57,7 @@ export class TopSearchComponent implements OnInit {
   }
 
   requestWordsList(): void {
-    this.http.post<any>('http://localhost:5656/suggestions?inputvalue=' + this.inputValue, {}).subscribe(data => {
+    this.http.get<any>('http://localhost:5656/api/v1/suggestions?inputvalue=' + this.inputValue, {}).subscribe(data => {
       console.log(data);
       this.variants = [];
       data.forEach(word => {

@@ -40,7 +40,7 @@ export class TagsCloudComponent implements OnInit {
 
   sendRequestAndFillObject(): void {
 
-    this.http.post('http://localhost:5656/tags?getalltags=1', {}).subscribe(data => {
+    this.http.get('http://localhost:5656/api/v1/tags?getalltags=1', {}).subscribe(data => {
 
       // console.log('Response: ', data);
 
